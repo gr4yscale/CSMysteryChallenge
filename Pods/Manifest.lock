@@ -2,6 +2,9 @@ PODS:
   - Groot (0.1)
   - JXHTTP (1.0.0)
   - Kiwi (2.3.0)
+  - libextobjc/EXTScope (0.4):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.4)
   - Objection (1.4)
   - TMTumblrSDK (1.0.8):
     - TMTumblrSDK/Activity
@@ -22,6 +25,7 @@ PODS:
 DEPENDENCIES:
   - Groot (~> 0.1)
   - Kiwi (~> 2.3.0)
+  - libextobjc/EXTScope (~> 0.4)
   - Objection (~> 1.4)
   - TMTumblrSDK
 
@@ -29,6 +33,7 @@ SPEC CHECKSUMS:
   Groot: 5b3f5e6cc79b8f16fab2e3fcfed51a304415500b
   JXHTTP: dd1fe9c6fa21e7b2be9724ef2be16c66aafc44b4
   Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
+  libextobjc: ba42e4111f433273a886cd54f0ddaddb7f62f82f
   Objection: 8176a996209cdcd23490c57d6e807a25faa8d54d
   TMTumblrSDK: b9fada23e88b42ade2b492a6db95bfb1dff6304b
 
