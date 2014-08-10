@@ -8,10 +8,16 @@
 
 #import <Kiwi/Kiwi.h>
 #import "CSPhoto.h"
+#import "CSUnitTestHelpers.h"
 
 SPEC_BEGIN(CSPhotoSpec)
 
 describe(@"CSPhoto", ^{
+    describe(@"mapping", ^{
+        it(@"mapps JSON onto an NSManagedObject", ^{
+            // oh no! we don't have a managed object context, time to fix...
+        });
+    });
   
 });
 
