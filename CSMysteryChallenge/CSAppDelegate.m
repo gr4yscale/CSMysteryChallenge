@@ -8,7 +8,8 @@
 
 #import "CSAppDelegate.h"
 #import "TMAPIClient.h"
-
+#import <Objection.h>
+#import "CSMysteryChallengeObjectionModule.h"
 
 @implementation CSAppDelegate
 
@@ -18,6 +19,7 @@
 	[TMAPIClient sharedInstance].OAuthConsumerKey = @"h9L7plh4MExVm5Df44ZJGjyslX0urpzDhfuksZpp6JhiHujXa6";
 	[TMAPIClient sharedInstance].OAuthConsumerSecret = @"JjlPUaQbMMtyO5tqqvnyHezs1r4rXt0BgprFa0VbMctf1lJEFw";
     
+    [self configureObjection];
 	return YES;
 }
 
@@ -48,6 +50,16 @@
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
 	return [[TMAPIClient sharedInstance] handleOpenURL:url];
+}
+
+
+#pragma mark - Private
+
+- (void)configureObjection {
+    CSMysteryChallengeObjectionModule *module = [[CSMysteryChallengeObjectionModule alloc] init];
+    JSObjectionInjector *injector = [JSObjection createInjector:module];
+    [JSObjection setDefaultInjector:injector];
+    [[JSObjection defaultInjector] injectDependencies:self];
 }
 
 @end
