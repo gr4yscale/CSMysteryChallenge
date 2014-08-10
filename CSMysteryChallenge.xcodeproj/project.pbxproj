@@ -22,7 +22,6 @@
 		A838F375187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
 		A838F376187F070A002498E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F358187F070A002498E5 /* UIKit.framework */; };
 		A838F37E187F070A002498E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A838F37C187F070A002498E5 /* InfoPlist.strings */; };
-		A838F380187F070A002498E5 /* CSMysteryChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A838F37F187F070A002498E5 /* CSMysteryChallengeTests.m */; };
 		AF2F2C1B0A4E4AED88709BBF /* libPods-Unit Tests-Kiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 119BAE4B97F1498790F46413 /* libPods-Unit Tests-Kiwi.a */; };
 		EC158790212C40158214B366 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A2EBEF67DE4A779F5BC24D /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -63,7 +62,6 @@
 		A838F373187F070A002498E5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A838F37B187F070A002498E5 /* CSMysteryChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CSMysteryChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		A838F37D187F070A002498E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		A838F37F187F070A002498E5 /* CSMysteryChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSMysteryChallengeTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +171,6 @@
 		A838F379187F070A002498E5 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A838F37F187F070A002498E5 /* CSMysteryChallengeTests.m */,
 				A838F37A187F070A002498E5 /* Supporting Files */,
 			);
 			path = "Unit Tests";
@@ -365,7 +362,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A838F380187F070A002498E5 /* CSMysteryChallengeTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
