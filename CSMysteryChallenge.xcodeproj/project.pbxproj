@@ -23,6 +23,7 @@
 		A838F376187F070A002498E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F358187F070A002498E5 /* UIKit.framework */; };
 		A838F37E187F070A002498E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A838F37C187F070A002498E5 /* InfoPlist.strings */; };
 		A838F380187F070A002498E5 /* CSMysteryChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A838F37F187F070A002498E5 /* CSMysteryChallengeTests.m */; };
+		AF2F2C1B0A4E4AED88709BBF /* libPods-Unit Tests-Kiwi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 119BAE4B97F1498790F46413 /* libPods-Unit Tests-Kiwi.a */; };
 		EC158790212C40158214B366 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65A2EBEF67DE4A779F5BC24D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -37,9 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		119BAE4B97F1498790F46413 /* libPods-Unit Tests-Kiwi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Unit Tests-Kiwi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		291A0055199767CB005E66A1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		291A00571997693F005E66A1 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		291A00581997693F005E66A1 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		3F1E55CCDFF04C9B8EED4089 /* Pods-Unit Tests-Kiwi.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests-Kiwi.xcconfig"; path = "Pods/Pods-Unit Tests-Kiwi.xcconfig"; sourceTree = "<group>"; };
 		65A2EBEF67DE4A779F5BC24D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C44B7ACD14D17B171EF43 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		A838F351187F070A002498E5 /* CSMysteryChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSMysteryChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +85,7 @@
 				A838F374187F070A002498E5 /* XCTest.framework in Frameworks */,
 				A838F376187F070A002498E5 /* UIKit.framework in Frameworks */,
 				A838F375187F070A002498E5 /* Foundation.framework in Frameworks */,
+				AF2F2C1B0A4E4AED88709BBF /* libPods-Unit Tests-Kiwi.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,10 +113,11 @@
 			isa = PBXGroup;
 			children = (
 				A838F35A187F070A002498E5 /* CSMysteryChallenge */,
-				A838F379187F070A002498E5 /* CSMysteryChallengeTests */,
+				A838F379187F070A002498E5 /* Unit Tests */,
 				A838F353187F070A002498E5 /* Frameworks */,
 				A838F352187F070A002498E5 /* Products */,
 				7E8C44B7ACD14D17B171EF43 /* Pods.xcconfig */,
+				3F1E55CCDFF04C9B8EED4089 /* Pods-Unit Tests-Kiwi.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +138,7 @@
 				A838F358187F070A002498E5 /* UIKit.framework */,
 				A838F373187F070A002498E5 /* XCTest.framework */,
 				65A2EBEF67DE4A779F5BC24D /* libPods.a */,
+				119BAE4B97F1498790F46413 /* libPods-Unit Tests-Kiwi.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,13 +170,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A838F379187F070A002498E5 /* CSMysteryChallengeTests */ = {
+		A838F379187F070A002498E5 /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
 				A838F37F187F070A002498E5 /* CSMysteryChallengeTests.m */,
 				A838F37A187F070A002498E5 /* Supporting Files */,
 			);
-			path = CSMysteryChallengeTests;
+			path = "Unit Tests";
 			sourceTree = "<group>";
 		};
 		A838F37A187F070A002498E5 /* Supporting Files */ = {
@@ -208,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A838F386187F070A002498E5 /* Build configuration list for PBXNativeTarget "Unit Tests-Kiwi" */;
 			buildPhases = (
+				7B4209F8BE9C492E8F14AC28 /* Check Pods Manifest.lock */,
 				A838F36E187F070A002498E5 /* Sources */,
 				A838F36F187F070A002498E5 /* Frameworks */,
 				A838F370187F070A002498E5 /* Resources */,
+				B89E362F707E40A4B85947A8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -306,6 +314,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B4209F8BE9C492E8F14AC28 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B89E362F707E40A4B85947A8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Unit Tests-Kiwi-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -469,6 +507,7 @@
 		};
 		A838F387187F070A002498E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F1E55CCDFF04C9B8EED4089 /* Pods-Unit Tests-Kiwi.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CSMysteryChallenge.app/CSMysteryChallenge";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -491,6 +530,7 @@
 		};
 		A838F388187F070A002498E5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F1E55CCDFF04C9B8EED4089 /* Pods-Unit Tests-Kiwi.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CSMysteryChallenge.app/CSMysteryChallenge";
 				FRAMEWORK_SEARCH_PATHS = (
