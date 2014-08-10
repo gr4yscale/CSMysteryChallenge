@@ -20,15 +20,18 @@
 
 @implementation CSDataAccess
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
         [self buildManagedObjectContexts];
+        [self mergeChangesOnContextDidSaveNotification];
     }
     return self;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 #pragma mark - Private
 
@@ -41,6 +44,21 @@
     self.mainQueueMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     self.mainQueueMOC.parentContext = self.persistentStoreMOC;
     self.mainQueueMOC.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy;
+}
+
+- (void)mergeChangesOnContextDidSaveNotification {
+    @weakify(self);
+    [[NSNotificationCenter defaultCenter] addObserverForName:NSManagedObjectContextDidSaveNotification
+                                                      object:nil
+                                                       queue:nil
+                                                  usingBlock:^(NSNotification *notification) {
+                                                      @strongify(self);
+                                                      if (notification.object == self.persistentStoreMOC) {
+                                                          [self.mainQueueMOC performBlock:^(){
+                                                              [self.mainQueueMOC mergeChangesFromContextDidSaveNotification:notification];
+                                                          }];
+                                                      }
+                                                  }];
 }
 
 @end
