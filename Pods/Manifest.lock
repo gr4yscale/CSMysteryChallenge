@@ -1,4 +1,5 @@
 PODS:
+  - Groot (0.1)
   - JXHTTP (1.0.0)
   - TMTumblrSDK (1.0.8):
     - TMTumblrSDK/Activity
@@ -17,9 +18,11 @@ PODS:
   - TMTumblrSDK/Core (1.0.8)
 
 DEPENDENCIES:
+  - Groot (~> 0.1)
   - TMTumblrSDK
 
 SPEC CHECKSUMS:
+  Groot: 5b3f5e6cc79b8f16fab2e3fcfed51a304415500b
   JXHTTP: dd1fe9c6fa21e7b2be9724ef2be16c66aafc44b4
   TMTumblrSDK: b9fada23e88b42ade2b492a6db95bfb1dff6304b
 
