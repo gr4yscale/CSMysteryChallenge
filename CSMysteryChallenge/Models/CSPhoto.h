@@ -1,5 +1,5 @@
 //
-//  Photo.h
+//  CSPhoto.h
 //  CSMysteryChallenge
 //
 //  Created by Tyler Powers on 8/10/14.
@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface Photo : NSManagedObject
+@interface CSPhoto : NSManagedObject
 
 @property (nonatomic, retain) NSString * caption;
 @property (nonatomic, retain) NSNumber * identifier;

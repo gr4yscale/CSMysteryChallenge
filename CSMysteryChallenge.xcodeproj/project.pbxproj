@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		291A0056199767CB005E66A1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 291A0054199767CB005E66A1 /* Model.xcdatamodeld */; };
-		291A00591997693F005E66A1 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = 291A00581997693F005E66A1 /* Photo.m */; };
+		291A00591997693F005E66A1 /* CSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 291A00581997693F005E66A1 /* CSPhoto.m */; };
 		A838F355187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
 		A838F357187F070A002498E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F356187F070A002498E5 /* CoreGraphics.framework */; };
 		A838F359187F070A002498E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F358187F070A002498E5 /* UIKit.framework */; };
@@ -39,8 +39,8 @@
 /* Begin PBXFileReference section */
 		119BAE4B97F1498790F46413 /* libPods-Unit Tests-Kiwi.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Unit Tests-Kiwi.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		291A0055199767CB005E66A1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		291A00571997693F005E66A1 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
-		291A00581997693F005E66A1 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		291A00571997693F005E66A1 /* CSPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPhoto.h; sourceTree = "<group>"; };
+		291A00581997693F005E66A1 /* CSPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPhoto.m; sourceTree = "<group>"; };
 		3F1E55CCDFF04C9B8EED4089 /* Pods-Unit Tests-Kiwi.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests-Kiwi.xcconfig"; path = "Pods/Pods-Unit Tests-Kiwi.xcconfig"; sourceTree = "<group>"; };
 		65A2EBEF67DE4A779F5BC24D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C44B7ACD14D17B171EF43 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -93,8 +93,8 @@
 		29470A6B19975F020059874E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				291A00571997693F005E66A1 /* Photo.h */,
-				291A00581997693F005E66A1 /* Photo.m */,
+				291A00571997693F005E66A1 /* CSPhoto.h */,
+				291A00581997693F005E66A1 /* CSPhoto.m */,
 				291A0054199767CB005E66A1 /* Model.xcdatamodeld */,
 			);
 			path = Models;
@@ -353,7 +353,7 @@
 				A838F365187F070A002498E5 /* CSAppDelegate.m in Sources */,
 				A838F361187F070A002498E5 /* main.m in Sources */,
 				A838F36B187F070A002498E5 /* CSViewController.m in Sources */,
-				291A00591997693F005E66A1 /* Photo.m in Sources */,
+				291A00591997693F005E66A1 /* CSPhoto.m in Sources */,
 				291A0056199767CB005E66A1 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
