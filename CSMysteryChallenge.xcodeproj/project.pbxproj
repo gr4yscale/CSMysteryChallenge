@@ -56,7 +56,7 @@
 		A838F369187F070A002498E5 /* CSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSViewController.h; sourceTree = "<group>"; };
 		A838F36A187F070A002498E5 /* CSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSViewController.m; sourceTree = "<group>"; };
 		A838F36C187F070A002498E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A838F372187F070A002498E5 /* CSMysteryChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSMysteryChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A838F372187F070A002498E5 /* Unit Tests-Kiwi.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests-Kiwi.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A838F373187F070A002498E5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A838F37B187F070A002498E5 /* CSMysteryChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CSMysteryChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		A838F37D187F070A002498E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				A838F351187F070A002498E5 /* CSMysteryChallenge.app */,
-				A838F372187F070A002498E5 /* CSMysteryChallengeTests.xctest */,
+				A838F372187F070A002498E5 /* Unit Tests-Kiwi.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,9 +204,9 @@
 			productReference = A838F351187F070A002498E5 /* CSMysteryChallenge.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A838F371187F070A002498E5 /* CSMysteryChallengeTests */ = {
+		A838F371187F070A002498E5 /* Unit Tests-Kiwi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A838F386187F070A002498E5 /* Build configuration list for PBXNativeTarget "CSMysteryChallengeTests" */;
+			buildConfigurationList = A838F386187F070A002498E5 /* Build configuration list for PBXNativeTarget "Unit Tests-Kiwi" */;
 			buildPhases = (
 				A838F36E187F070A002498E5 /* Sources */,
 				A838F36F187F070A002498E5 /* Frameworks */,
@@ -217,9 +217,9 @@
 			dependencies = (
 				A838F378187F070A002498E5 /* PBXTargetDependency */,
 			);
-			name = CSMysteryChallengeTests;
+			name = "Unit Tests-Kiwi";
 			productName = CSMysteryChallengeTests;
-			productReference = A838F372187F070A002498E5 /* CSMysteryChallengeTests.xctest */;
+			productReference = A838F372187F070A002498E5 /* Unit Tests-Kiwi.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -251,7 +251,7 @@
 			projectRoot = "";
 			targets = (
 				A838F350187F070A002498E5 /* CSMysteryChallenge */,
-				A838F371187F070A002498E5 /* CSMysteryChallengeTests */,
+				A838F371187F070A002498E5 /* Unit Tests-Kiwi */,
 			);
 		};
 /* End PBXProject section */
@@ -528,7 +528,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A838F386187F070A002498E5 /* Build configuration list for PBXNativeTarget "CSMysteryChallengeTests" */ = {
+		A838F386187F070A002498E5 /* Build configuration list for PBXNativeTarget "Unit Tests-Kiwi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A838F387187F070A002498E5 /* Debug */,
