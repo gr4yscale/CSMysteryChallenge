@@ -1,5 +1,5 @@
 //
-//  CSPersisting.h
+//  NSURL+CSAdditions.h
 //  CSMysteryChallenge
 //
 //  Created by Tyler Powers on 8/10/14.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CSPersisting <NSObject>
+@interface NSURL (CSAdditions)
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
++ (NSURL *)documentsDirectory;
 
 @end

@@ -10,6 +10,8 @@
 		291A0056199767CB005E66A1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 291A0054199767CB005E66A1 /* Model.xcdatamodeld */; };
 		291A00591997693F005E66A1 /* CSPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 291A00581997693F005E66A1 /* CSPhoto.m */; };
 		2934153719977FB10043A672 /* CSDataAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 2934153619977FB10043A672 /* CSDataAccess.m */; };
+		2934153B199785580043A672 /* CSMysteryChallengeObjectionModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2934153A199785580043A672 /* CSMysteryChallengeObjectionModule.m */; };
+		29341542199787980043A672 /* NSURL+CSAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29341541199787980043A672 /* NSURL+CSAdditions.m */; };
 		29D6FA5919976DF3004158C5 /* CSPhotoSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6FA5819976DF3004158C5 /* CSPhotoSpec.m */; };
 		29D6FA5C19976EFF004158C5 /* CSUnitTestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */; };
 		A838F355187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
@@ -47,6 +49,10 @@
 		2934153519977FB10043A672 /* CSDataAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDataAccess.h; sourceTree = "<group>"; };
 		2934153619977FB10043A672 /* CSDataAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDataAccess.m; sourceTree = "<group>"; };
 		29341538199783210043A672 /* CSPersisting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPersisting.h; sourceTree = "<group>"; };
+		29341539199785580043A672 /* CSMysteryChallengeObjectionModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSMysteryChallengeObjectionModule.h; sourceTree = "<group>"; };
+		2934153A199785580043A672 /* CSMysteryChallengeObjectionModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSMysteryChallengeObjectionModule.m; sourceTree = "<group>"; };
+		29341540199787980043A672 /* NSURL+CSAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+CSAdditions.h"; sourceTree = "<group>"; };
+		29341541199787980043A672 /* NSURL+CSAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+CSAdditions.m"; sourceTree = "<group>"; };
 		29D6FA5819976DF3004158C5 /* CSPhotoSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPhotoSpec.m; sourceTree = "<group>"; };
 		29D6FA5A19976EFF004158C5 /* CSUnitTestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUnitTestHelpers.h; sourceTree = "<group>"; };
 		29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUnitTestHelpers.m; sourceTree = "<group>"; };
@@ -99,6 +105,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2934153F1997877C0043A672 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				29341540199787980043A672 /* NSURL+CSAdditions.h */,
+				29341541199787980043A672 /* NSURL+CSAdditions.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		29470A6B19975F020059874E /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +130,8 @@
 		29470A6C199764DB0059874E /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				29341539199785580043A672 /* CSMysteryChallengeObjectionModule.h */,
+				2934153A199785580043A672 /* CSMysteryChallengeObjectionModule.m */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -156,6 +173,7 @@
 		A838F35A187F070A002498E5 /* CSMysteryChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				2934153F1997877C0043A672 /* Categories */,
 				29470A6C199764DB0059874E /* Library */,
 				29470A6B19975F020059874E /* Models */,
 				A838F363187F070A002498E5 /* CSAppDelegate.h */,
@@ -371,7 +389,9 @@
 				2934153719977FB10043A672 /* CSDataAccess.m in Sources */,
 				A838F36B187F070A002498E5 /* CSViewController.m in Sources */,
 				291A00591997693F005E66A1 /* CSPhoto.m in Sources */,
+				29341542199787980043A672 /* NSURL+CSAdditions.m in Sources */,
 				29D6FA5C19976EFF004158C5 /* CSUnitTestHelpers.m in Sources */,
+				2934153B199785580043A672 /* CSMysteryChallengeObjectionModule.m in Sources */,
 				291A0056199767CB005E66A1 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
