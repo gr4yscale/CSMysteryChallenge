@@ -53,7 +53,11 @@ objection_requires_sel(@selector(managedObjectContext))
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CSPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CSPostTableViewCellReuseIdentifier];
     CSPost *post = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.postCaptionLabel.text = post.caption;
+    cell.captionLabel.text = post.caption;
+    cell.tagsLabel.text = @"#tag #anothertag #fake #mockdata";
+    cell.notesCountLabel.text = [NSString stringWithFormat:@"%@ notes", [post.noteCount stringValue]];
+    cell.timeAgoLabel.text = @"3 min ago";
+    
     return cell;
 }
 
