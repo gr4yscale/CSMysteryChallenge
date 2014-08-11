@@ -7,18 +7,14 @@
 //
 
 #import "CSAppDelegate.h"
-#import "TMAPIClient.h"
 #import "CSMysteryChallengeObjectionModule.h"
+#import "CSDataAccess.h"
+#import "TMAPIClient.h"
 #import "CSDataAccess.h"
 
 @implementation CSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	// GB - 'Mystery challenge' credentials, required to use the TMAPIClient.
-    
-	[TMAPIClient sharedInstance].OAuthConsumerKey = @"h9L7plh4MExVm5Df44ZJGjyslX0urpzDhfuksZpp6JhiHujXa6";
-	[TMAPIClient sharedInstance].OAuthConsumerSecret = @"JjlPUaQbMMtyO5tqqvnyHezs1r4rXt0BgprFa0VbMctf1lJEFw";
-    
     [self configureObjection];
 	return YES;
 }
@@ -60,6 +56,8 @@
     JSObjectionInjector *injector = [JSObjection createInjector:module];
     [JSObjection setDefaultInjector:injector];
     [[JSObjection defaultInjector] injectDependencies:self];
+    
+    [injector injectDependencies:[injector getObject:[CSDataAccess class]]];
 }
 
 @end

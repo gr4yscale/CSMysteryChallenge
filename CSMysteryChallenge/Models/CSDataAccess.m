@@ -9,26 +9,23 @@
 #import "CSDataAccess.h"
 
 @interface CSDataAccess ()
+
 @property (nonatomic, strong) id<CSPersisting>store;
+@property (nonatomic, strong) TMAPIClient *apiClient;
 
 @end
+
 
 @implementation CSDataAccess
 
 objection_register_singleton(CSDataAccess)
-
-- (instancetype)initWithStore:(id<CSPersisting>)store {
-    self = [super init];
-    if (self) {
-        self.store = store;
-        [self buildManagedObjectContexts];
-        [self mergeChangesOnContextDidSaveNotification];
-    }
-    return self;
-}
+objection_requires_sel(@selector(store),
+                       @selector(apiClient))
 
 - (void)awakeFromObjection {
-    NSLog(@"CSDataAccess awoke from objection");
+    [self buildManagedObjectContexts];
+    [self addObserverForContextDidSaveNotification];
+    [self setupAPIClient];
 }
 
 - (void)dealloc {
@@ -53,7 +50,7 @@ objection_register_singleton(CSDataAccess)
     self.mainQueueMOC.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy;
 }
 
-- (void)mergeChangesOnContextDidSaveNotification {
+- (void)addObserverForContextDidSaveNotification {
     @weakify(self);
     [[NSNotificationCenter defaultCenter] addObserverForName:NSManagedObjectContextDidSaveNotification
                                                       object:nil
@@ -66,6 +63,11 @@ objection_register_singleton(CSDataAccess)
                                                           }];
                                                       }
                                                   }];
+}
+
+- (void)setupAPIClient {
+    self.apiClient.OAuthConsumerKey = @"h9L7plh4MExVm5Df44ZJGjyslX0urpzDhfuksZpp6JhiHujXa6";
+    self.apiClient.OAuthConsumerSecret = @"JjlPUaQbMMtyO5tqqvnyHezs1r4rXt0BgprFa0VbMctf1lJEFw";
 }
 
 @end

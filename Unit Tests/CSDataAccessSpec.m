@@ -34,6 +34,10 @@ describe(@"CSDataAccess", ^{
         [[subject.mainQueueMOC shouldNot] beNil];
     });
     
+    it(@"has an API client", ^{
+        [[subject.apiClient shouldNot] beNil];
+    });
+    
 });
 
 SPEC_END
