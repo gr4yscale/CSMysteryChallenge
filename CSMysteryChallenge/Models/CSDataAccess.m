@@ -7,37 +7,43 @@
 //
 
 #import "CSDataAccess.h"
-#import "CSPersisting.h"
 
 @interface CSDataAccess ()
-
-@property (nonatomic, strong) id<CSPersisting> store;
-@property (nonatomic, strong) NSManagedObjectContext *persistentStoreMOC;
-@property (nonatomic, strong) NSManagedObjectContext *mainQueueMOC;
+@property (nonatomic, strong) id<CSPersisting>store;
 
 @end
 
-
 @implementation CSDataAccess
 
-- (instancetype)init {
+objection_register_singleton(CSDataAccess)
+
+- (instancetype)initWithStore:(id<CSPersisting>)store {
     self = [super init];
     if (self) {
+        self.store = store;
         [self buildManagedObjectContexts];
         [self mergeChangesOnContextDidSaveNotification];
     }
     return self;
 }
 
+- (void)awakeFromObjection {
+    NSLog(@"CSDataAccess awoke from objection");
+}
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+    return self.store.persistentStoreCoordinator;
 }
 
 #pragma mark - Private
 
 - (void)buildManagedObjectContexts {
     self.persistentStoreMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
-    self.persistentStoreMOC.persistentStoreCoordinator = self.store.persistentStoreCoordinator;
+    self.persistentStoreMOC.persistentStoreCoordinator = [self persistentStoreCoordinator];
     self.persistentStoreMOC.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy;
     
     // Create an MOC for use on the main queue

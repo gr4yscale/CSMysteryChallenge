@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CSPersisting.h"
 
-@interface CSDataAccess : NSObject
+
+@interface CSDataAccess : NSObject <CSPersisting>
+
+@property (nonatomic, strong) NSManagedObjectContext *persistentStoreMOC;
+@property (nonatomic, strong) NSManagedObjectContext *mainQueueMOC;
+
+- (instancetype)initWithStore:(id<CSPersisting>)store;
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
 
 @end

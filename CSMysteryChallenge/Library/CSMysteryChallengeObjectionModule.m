@@ -11,20 +11,21 @@
 #import <Groot/Groot.h>
 #import "NSURL+CSAdditions.h"
 #import "CSPersisting.h"
+#import "CSDataAccess.h"
 
 @implementation CSMysteryChallengeObjectionModule
 
 - (void)configure {
-    [self configurePersistenceStore];
+    
+    CSDataAccess *dataAccess = [[CSDataAccess alloc] initWithStore:[self configuredPersistenceStore]];
+    [self bind:dataAccess toClass:[CSDataAccess class]];
 }
 
-- (void)configurePersistenceStore {
+- (id<CSPersisting>)configuredPersistenceStore {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:@[bundle]];
     NSURL *url = [[NSURL documentsDirectory] URLByAppendingPathComponent:@"MysteryChallenge.sqlite"];
-    GRTManagedStore *store = [[GRTManagedStore alloc] initWithPath:[url absoluteString] managedObjectModel:model];
-    
-    [self bind:store toProtocol:@protocol(CSPersisting)];
+    return (id<CSPersisting>)[[GRTManagedStore alloc] initWithPath:[url absoluteString] managedObjectModel:model];
 }
 
 @end
