@@ -21,6 +21,8 @@
 		29A5D1931998643F007B5ED1 /* CSDateValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D1921998643F007B5ED1 /* CSDateValueTransformer.m */; };
 		29F769A8199890C000AE6D36 /* CSPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F769A7199890C000AE6D36 /* CSPostsViewController.xib */; };
 		29F769AB1998923700AE6D36 /* CSPostsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F769AA1998923700AE6D36 /* CSPostsView.m */; };
+		29F769AD199893C600AE6D36 /* CSPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F769AC199893C600AE6D36 /* CSPostTableViewCell.xib */; };
+		29F769B01998942D00AE6D36 /* CSPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F769AF1998942D00AE6D36 /* CSPostTableViewCell.m */; };
 		A838F355187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
 		A838F357187F070A002498E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F356187F070A002498E5 /* CoreGraphics.framework */; };
 		A838F359187F070A002498E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F358187F070A002498E5 /* UIKit.framework */; };
@@ -74,6 +76,9 @@
 		29F769A7199890C000AE6D36 /* CSPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSPostsViewController.xib; sourceTree = "<group>"; };
 		29F769A91998923700AE6D36 /* CSPostsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPostsView.h; sourceTree = "<group>"; };
 		29F769AA1998923700AE6D36 /* CSPostsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPostsView.m; sourceTree = "<group>"; };
+		29F769AC199893C600AE6D36 /* CSPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSPostTableViewCell.xib; sourceTree = "<group>"; };
+		29F769AE1998942D00AE6D36 /* CSPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPostTableViewCell.h; sourceTree = "<group>"; };
+		29F769AF1998942D00AE6D36 /* CSPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPostTableViewCell.m; sourceTree = "<group>"; };
 		3F1E55CCDFF04C9B8EED4089 /* Pods-Unit Tests-Kiwi.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests-Kiwi.xcconfig"; path = "Pods/Pods-Unit Tests-Kiwi.xcconfig"; sourceTree = "<group>"; };
 		65A2EBEF67DE4A779F5BC24D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C44B7ACD14D17B171EF43 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -166,6 +171,9 @@
 				29F769A7199890C000AE6D36 /* CSPostsViewController.xib */,
 				29F769A91998923700AE6D36 /* CSPostsView.h */,
 				29F769AA1998923700AE6D36 /* CSPostsView.m */,
+				29F769AC199893C600AE6D36 /* CSPostTableViewCell.xib */,
+				29F769AE1998942D00AE6D36 /* CSPostTableViewCell.h */,
+				29F769AF1998942D00AE6D36 /* CSPostTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 			files = (
 				29F769A8199890C000AE6D36 /* CSPostsViewController.xib in Resources */,
 				A838F36D187F070A002498E5 /* Images.xcassets in Resources */,
+				29F769AD199893C600AE6D36 /* CSPostTableViewCell.xib in Resources */,
 				A838F35F187F070A002498E5 /* InfoPlist.strings in Resources */,
 				A838F368187F070A002498E5 /* Main.storyboard in Resources */,
 			);
@@ -442,6 +451,7 @@
 				29A5D18D19985BD2007B5ED1 /* CSPathUtilities.m in Sources */,
 				2934153B199785580043A672 /* CSMysteryChallengeObjectionModule.m in Sources */,
 				291A0056199767CB005E66A1 /* Model.xcdatamodeld in Sources */,
+				29F769B01998942D00AE6D36 /* CSPostTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
