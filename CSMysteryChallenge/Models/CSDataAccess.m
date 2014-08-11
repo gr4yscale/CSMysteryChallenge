@@ -39,6 +39,7 @@ objection_register_singleton(CSDataAccess)
     return self.store.persistentStoreCoordinator;
 }
 
+
 #pragma mark - Private
 
 - (void)buildManagedObjectContexts {

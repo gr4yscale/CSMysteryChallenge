@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "CSPersisting.h"
 
-
 @interface CSDataAccess : NSObject <CSPersisting>
 
 @property (nonatomic, strong) NSManagedObjectContext *persistentStoreMOC;

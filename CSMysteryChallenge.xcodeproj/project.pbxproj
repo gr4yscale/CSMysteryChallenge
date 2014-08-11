@@ -17,6 +17,7 @@
 		29341548199792AF0043A672 /* CSPostSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6FA5819976DF3004158C5 /* CSPostSpec.m */; };
 		29341549199792B80043A672 /* CSUnitTestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */; };
 		2934154D1997ACBF0043A672 /* TumblrPostsFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = 2934154A1997A1BD0043A672 /* TumblrPostsFixture.json */; };
+		29A5D18A199846AE007B5ED1 /* CSResponseDeserializationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D189199846AE007B5ED1 /* CSResponseDeserializationOperation.m */; };
 		A838F355187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
 		A838F357187F070A002498E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F356187F070A002498E5 /* CoreGraphics.framework */; };
 		A838F359187F070A002498E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F358187F070A002498E5 /* UIKit.framework */; };
@@ -59,6 +60,8 @@
 		2934154319978C330043A672 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29341545199791460043A672 /* CSDataAccessSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDataAccessSpec.m; sourceTree = "<group>"; };
 		2934154A1997A1BD0043A672 /* TumblrPostsFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TumblrPostsFixture.json; sourceTree = "<group>"; };
+		29A5D188199846AE007B5ED1 /* CSResponseDeserializationOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSResponseDeserializationOperation.h; sourceTree = "<group>"; };
+		29A5D189199846AE007B5ED1 /* CSResponseDeserializationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSResponseDeserializationOperation.m; sourceTree = "<group>"; };
 		29D6FA5819976DF3004158C5 /* CSPostSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPostSpec.m; sourceTree = "<group>"; };
 		29D6FA5A19976EFF004158C5 /* CSUnitTestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUnitTestHelpers.h; sourceTree = "<group>"; };
 		29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUnitTestHelpers.m; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 			children = (
 				29341539199785580043A672 /* CSMysteryChallengeObjectionModule.h */,
 				2934153A199785580043A672 /* CSMysteryChallengeObjectionModule.m */,
+				29A5D188199846AE007B5ED1 /* CSResponseDeserializationOperation.h */,
+				29A5D189199846AE007B5ED1 /* CSResponseDeserializationOperation.m */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -396,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A5D18A199846AE007B5ED1 /* CSResponseDeserializationOperation.m in Sources */,
 				A838F365187F070A002498E5 /* CSAppDelegate.m in Sources */,
 				A838F361187F070A002498E5 /* main.m in Sources */,
 				2934153719977FB10043A672 /* CSDataAccess.m in Sources */,
