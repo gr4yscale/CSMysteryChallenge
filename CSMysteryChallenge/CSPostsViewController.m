@@ -10,6 +10,7 @@
 #import "CSDataAccess.h"
 #import "CSPostsDataSource.h"
 #import "CSPostTableViewCell.h"
+#import <SVPullToRefresh.h>
 
 @interface CSPostsViewController ()
 
@@ -54,6 +55,15 @@ objection_requires_sel(@selector(dataAccess),
     self.tableView.dataSource = self.postsDatasource;
     [self.tableView registerNib:[UINib nibWithNibName:CSPostTableViewCellNibName bundle:nil] forCellReuseIdentifier:CSPostTableViewCellReuseIdentifier];
     [self.tableView reloadData];
+    
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        self.postsPageOffset = 0;
+        [self fetchMorePosts];
+    }];
+    
+    [self.tableView addInfiniteScrollingWithActionHandler:^{
+        [self fetchMorePosts];
+    }];
 }
 
 
@@ -65,7 +75,14 @@ objection_requires_sel(@selector(dataAccess),
         @strongify(self);
         NSLog(@"fetched posts at offset: %@", @(self.postsPageOffset));
         self.fetchingMorePosts = NO;
-        self.postsPageOffset += 1;
+        NSUInteger postsCount = [response[@"posts"] count];
+        if (postsCount > 0) {
+            self.postsPageOffset += postsCount;
+        } else {
+            self.postsPageOffset += 20;
+        }
+        [self.tableView.pullToRefreshView stopAnimating];
+        [self.tableView.infiniteScrollingView stopAnimating];
     }];
 }
 
