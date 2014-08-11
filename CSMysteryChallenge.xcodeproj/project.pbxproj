@@ -19,6 +19,7 @@
 		29A5D18A199846AE007B5ED1 /* CSResponseDeserializationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D189199846AE007B5ED1 /* CSResponseDeserializationOperation.m */; };
 		29A5D18D19985BD2007B5ED1 /* CSPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D18C19985BD2007B5ED1 /* CSPathUtilities.m */; };
 		29A5D1931998643F007B5ED1 /* CSDateValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D1921998643F007B5ED1 /* CSDateValueTransformer.m */; };
+		29CFB6BB1998D8FC000E0503 /* CSPostsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 29CFB6BA1998D8FC000E0503 /* CSPostsPresenter.m */; };
 		29F769A8199890C000AE6D36 /* CSPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F769A7199890C000AE6D36 /* CSPostsViewController.xib */; };
 		29F769AB1998923700AE6D36 /* CSPostsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F769AA1998923700AE6D36 /* CSPostsView.m */; };
 		29F769AD199893C600AE6D36 /* CSPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F769AC199893C600AE6D36 /* CSPostTableViewCell.xib */; };
@@ -70,6 +71,8 @@
 		29A5D18C19985BD2007B5ED1 /* CSPathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPathUtilities.m; sourceTree = "<group>"; };
 		29A5D1911998643F007B5ED1 /* CSDateValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDateValueTransformer.h; sourceTree = "<group>"; };
 		29A5D1921998643F007B5ED1 /* CSDateValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDateValueTransformer.m; sourceTree = "<group>"; };
+		29CFB6B91998D8FC000E0503 /* CSPostsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPostsPresenter.h; sourceTree = "<group>"; };
+		29CFB6BA1998D8FC000E0503 /* CSPostsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPostsPresenter.m; sourceTree = "<group>"; };
 		29D6FA5819976DF3004158C5 /* CSPostSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPostSpec.m; sourceTree = "<group>"; };
 		29D6FA5A19976EFF004158C5 /* CSUnitTestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUnitTestHelpers.h; sourceTree = "<group>"; };
 		29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUnitTestHelpers.m; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 				29F769AC199893C600AE6D36 /* CSPostTableViewCell.xib */,
 				29F769AE1998942D00AE6D36 /* CSPostTableViewCell.h */,
 				29F769AF1998942D00AE6D36 /* CSPostTableViewCell.m */,
+				29CFB6B91998D8FC000E0503 /* CSPostsPresenter.h */,
+				29CFB6BA1998D8FC000E0503 /* CSPostsPresenter.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -457,6 +462,7 @@
 				29A5D18A199846AE007B5ED1 /* CSResponseDeserializationOperation.m in Sources */,
 				A838F365187F070A002498E5 /* CSAppDelegate.m in Sources */,
 				A838F361187F070A002498E5 /* main.m in Sources */,
+				29CFB6BB1998D8FC000E0503 /* CSPostsPresenter.m in Sources */,
 				29A5D1931998643F007B5ED1 /* CSDateValueTransformer.m in Sources */,
 				2934153719977FB10043A672 /* CSDataAccess.m in Sources */,
 				A838F36B187F070A002498E5 /* CSPostsViewController.m in Sources */,

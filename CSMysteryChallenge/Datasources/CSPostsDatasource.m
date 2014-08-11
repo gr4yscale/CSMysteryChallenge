@@ -9,17 +9,20 @@
 #import "CSPostsDatasource.h"
 #import "CSPost.h"
 #import "CSPostTableViewCell.h"
+#import "CSPostsPresenter.h"
 
 @interface CSPostsDatasource ()
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) CSPostsPresenter *postsPresenter;
 
 @end
 
 @implementation CSPostsDatasource
 
-objection_requires_sel(@selector(managedObjectContext))
+objection_requires_sel(@selector(managedObjectContext),
+                       @selector(postsPresenter))
 
 - (void)awakeFromObjection {
     [self setupFetchedResultsController];
@@ -53,11 +56,7 @@ objection_requires_sel(@selector(managedObjectContext))
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CSPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CSPostTableViewCellReuseIdentifier];
     CSPost *post = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.captionLabel.text = post.caption;
-    cell.tagsLabel.text = @"#tag #anothertag #fake #mockdata";
-    cell.notesCountLabel.text = [NSString stringWithFormat:@"%@ notes", [post.noteCount stringValue]];
-    cell.timeAgoLabel.text = @"3 min ago";
-    
+    [self.postsPresenter configurePostTableViewCell:cell withPost:post];
     return cell;
 }
 
