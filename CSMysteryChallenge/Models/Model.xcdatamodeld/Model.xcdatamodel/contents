@@ -7,18 +7,34 @@
                 <entry key="JSONKeyPath" value="id"/>
             </userInfo>
         </attribute>
-        <attribute name="imagePermalink" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="noteCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="imagePermalink" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="image_permalink"/>
+            </userInfo>
+        </attribute>
+        <attribute name="noteCount" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="note_count"/>
+            </userInfo>
+        </attribute>
         <attribute name="photos" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="postURL" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="shortURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postURL" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="post_url"/>
+            </userInfo>
+        </attribute>
+        <attribute name="shortURL" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="short_url"/>
+            </userInfo>
+        </attribute>
         <attribute name="tags" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="timestamp" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
         <userInfo>
             <entry key="identityAttribute" value="identifier"/>
         </userInfo>
     </entity>
     <elements>
-        <element name="CSPost" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CSPost" positionX="0" positionY="0" width="128" height="180"/>
     </elements>
 </model>
