@@ -19,4 +19,6 @@ FOUNDATION_EXTERN NSString *const CSPostTableViewCellNibName;;
 @property (weak, nonatomic) IBOutlet UILabel *notesCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeAgoLabel;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *imgViewHeightConstraint;
+
 @end

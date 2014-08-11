@@ -30,4 +30,9 @@
     return [NSURL URLWithString:urlString];
 }
 
+- (CGSize)sizeForFirstImage {
+    NSDictionary *sizeDict = [self.photos firstObject][@"original_size"];
+    return CGSizeMake([sizeDict[@"width"] floatValue], [sizeDict[@"height"] floatValue]);
+}
+
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CSPostsView.h"
 
-@interface CSPostsViewController : UIViewController
+@interface CSPostsViewController : UIViewController <UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet CSPostsView *postsView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;

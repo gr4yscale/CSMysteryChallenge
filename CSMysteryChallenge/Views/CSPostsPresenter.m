@@ -14,13 +14,23 @@
 
 @implementation CSPostsPresenter
 
-- (void)configurePostTableViewCell:(CSPostTableViewCell *)cell withPost:(CSPost *)post {
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.templateCell = [[[UINib nibWithNibName:CSPostTableViewCellNibName bundle:nil] instantiateWithOwner:nil options:nil] firstObject];
+    }
+    return self;
+}
+
+- (void)configurePostTableViewCell:(CSPostTableViewCell *)cell withPost:(CSPost *)post fetchImages:(BOOL)fetchImages {
     cell.tagsLabel.text = [self tagsStringForTags:post.tags];
     cell.notesCountLabel.text = [NSString stringWithFormat:@"%@ notes", [post.noteCount stringValue]];
     cell.timeAgoLabel.text = @"3 min ago";
     
-    [cell.imgView sd_setImageWithURL:[post firstImageURL]
-                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
+    if (fetchImages) {
+        [cell.imgView sd_setImageWithURL:[post firstImageURL]
+                               completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
+    }
     
     UIFont *font = [UIFont fontWithName:@"EuphemiaUCAS" size:16.0];
     
@@ -30,6 +40,9 @@
     NSData *captionData = [post.caption dataUsingEncoding:NSUTF8StringEncoding];
     cell.captionLabel.attributedText = [NSAttributedString attributedStringFromHTMLData:captionData attributes:attributes];
     cell.captionLabel.alpha = 0.6;
+    
+    cell.imgViewHeightConstraint.constant = [self heightForImageViewWithPost:post withCell:cell];
+    [cell setNeedsUpdateConstraints];
 }
 
 - (NSString *)tagsStringForTags:(NSArray *)tags {
@@ -43,6 +56,11 @@
     return string;
 }
 
-
+- (CGFloat)heightForImageViewWithPost:(CSPost *)post withCell:(CSPostTableViewCell *)cell {
+    CGSize originalSize = [post sizeForFirstImage];
+    CGFloat ratio = originalSize.width / originalSize.height;
+    CGFloat newHeight = cell.imgView.frame.size.width / ratio;
+    return newHeight;
+}
 
 @end

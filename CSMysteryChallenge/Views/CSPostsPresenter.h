@@ -11,6 +11,8 @@
 
 @interface CSPostsPresenter : NSObject
 
-- (void)configurePostTableViewCell:(CSPostTableViewCell *)cell withPost:(CSPost *)post;
+@property (nonatomic, strong) CSPostTableViewCell *templateCell;
+
+- (void)configurePostTableViewCell:(CSPostTableViewCell *)cell withPost:(CSPost *)post fetchImages:(BOOL)fetchImages;
 
 @end

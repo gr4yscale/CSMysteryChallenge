@@ -48,6 +48,7 @@ objection_requires_sel(@selector(dataAccess),
 #pragma mark - Private
 
 - (void)setupTableView {
+    self.tableView.delegate = self;
     self.postsDatasource.tableView = self.tableView;
     self.tableView.delegate = self;
     self.tableView.dataSource = self.postsDatasource;
@@ -68,5 +69,11 @@ objection_requires_sel(@selector(dataAccess),
     }];
 }
 
+
+#pragma mark - UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [self.postsDatasource tableView:tableView heightForRowAtIndexPath:indexPath];
+}
 
 @end

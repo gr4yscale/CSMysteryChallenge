@@ -24,5 +24,6 @@
 
 + (NSString *)entityName;
 - (NSURL *)firstImageURL;
+- (CGSize)sizeForFirstImage;
 
 @end

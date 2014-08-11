@@ -56,8 +56,27 @@ objection_requires_sel(@selector(managedObjectContext),
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CSPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CSPostTableViewCellReuseIdentifier];
     CSPost *post = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [self.postsPresenter configurePostTableViewCell:cell withPost:post];
+    [self.postsPresenter configurePostTableViewCell:cell withPost:post fetchImages:YES];
     return cell;
+}
+
+
+#pragma UITableViewDelegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CSPost *post = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    CSPostTableViewCell *templateCell = self.postsPresenter.templateCell;
+    [self.postsPresenter configurePostTableViewCell:templateCell withPost:post fetchImages:NO];
+    
+    // unable to get a non-zero value out of [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    // so...resorting to hacks :(
+    
+    CGSize captionLabelSize = [templateCell.captionLabel systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    CGSize tagLabelSize = [templateCell.tagsLabel systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    
+    CGFloat dynamicHeights = captionLabelSize.height + tagLabelSize.height + templateCell.imgViewHeightConstraint.constant;
+    return dynamicHeights + 97;
 }
 
 

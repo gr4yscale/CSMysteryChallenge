@@ -12,4 +12,6 @@
 
 @property (nonatomic, weak) UITableView *tableView;
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

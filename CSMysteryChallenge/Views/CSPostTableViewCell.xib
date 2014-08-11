@@ -9,49 +9,80 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="459" id="aBW-0l-gf5" customClass="CSPostTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="459"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aBW-0l-gf5" id="NVE-b0-gf9">
+            <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aBW-0l-gf5" id="NVE-b0-gf9">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="458"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJR-jk-j0O" userLabel="imageView">
+                    <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QJR-jk-j0O" userLabel="imageView">
                         <rect key="frame" x="0.0" y="35" width="320" height="192"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="192" id="UPU-Qc-pSY"/>
+                            <constraint firstAttribute="width" constant="320" id="dqs-cE-YgN"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="gne-f7-mKy" userLabel="captionLabel">
-                        <rect key="frame" x="20" y="235" width="280" height="134"/>
+                    <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="gne-f7-mKy" userLabel="captionLabel">
+                        <rect key="frame" x="20" y="235" width="280" height="148"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="280" id="WR3-PD-2Iy"/>
+                        </constraints>
                         <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis sapien quis felis tristique convallis. Nam augue ligula, placerat at arcu ut, scelerisque lacinia lacus. Donec sed faucibus augue. Donec quis justo justo. Sed gravida varius lectus eget volutpat. Proin gravida iaculis ipsum</string>
                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                         <color key="textColor" red="0.14827806122448983" green="0.14827806122448983" blue="0.14827806122448983" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tags tags moretags taggy tag tag" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ePu-aY-S14" userLabel="tagsLabel">
-                        <rect key="frame" x="20" y="377" width="280" height="30"/>
+                    <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="tags tags moretags taggy tag tag" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ePu-aY-S14" userLabel="tagsLabel">
+                        <rect key="frame" x="20" y="386" width="280" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="280" id="ARR-l1-cBU"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
                         <color key="textColor" red="0.49627311860000001" green="0.49627311860000001" blue="0.49627311860000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="99 notes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="62" translatesAutoresizingMaskIntoConstraints="NO" id="fWU-Ry-Bjw" userLabel="notesCountLabel">
+                    <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99 notes" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="62" translatesAutoresizingMaskIntoConstraints="NO" id="fWU-Ry-Bjw" userLabel="notesCountLabel">
                         <rect key="frame" x="20" y="415" width="62" height="30"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="OfB-cN-9lK"/>
+                            <constraint firstAttribute="width" constant="62" id="eYM-r8-wTK"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="12"/>
                         <color key="textColor" red="0.49627311860000001" green="0.49627311860000001" blue="0.49627311860000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3 min ago" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="105" translatesAutoresizingMaskIntoConstraints="NO" id="7s0-qT-7bB" userLabel="timeAgoLabel">
-                        <rect key="frame" x="206" y="7" width="105" height="21"/>
+                    <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 min ago" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="146" translatesAutoresizingMaskIntoConstraints="NO" id="7s0-qT-7bB" userLabel="timeAgoLabel">
+                        <rect key="frame" x="165" y="6" width="146" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="146" id="FgW-R6-T3n"/>
+                            <constraint firstAttribute="height" constant="21" id="onM-N0-5cI"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
                         <color key="textColor" red="0.49627311860000001" green="0.49627311860000001" blue="0.49627311860000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="fWU-Ry-Bjw" secondAttribute="bottom" constant="13" id="2oj-p6-KVv"/>
+                    <constraint firstAttribute="centerX" secondItem="ePu-aY-S14" secondAttribute="centerX" id="7DN-12-laH"/>
+                    <constraint firstAttribute="centerX" secondItem="gne-f7-mKy" secondAttribute="centerX" id="G2j-zX-rUG"/>
+                    <constraint firstAttribute="bottom" secondItem="ePu-aY-S14" secondAttribute="bottom" constant="56" id="Tha-jh-VGP"/>
+                    <constraint firstItem="ePu-aY-S14" firstAttribute="top" secondItem="gne-f7-mKy" secondAttribute="bottom" constant="3" id="Vn3-4D-9Im"/>
+                    <constraint firstAttribute="trailing" secondItem="7s0-qT-7bB" secondAttribute="trailing" constant="9" id="Xlq-bw-Cq2"/>
+                    <constraint firstItem="fWU-Ry-Bjw" firstAttribute="leading" secondItem="NVE-b0-gf9" secondAttribute="leading" constant="20" id="d3V-VJ-72l"/>
+                    <constraint firstItem="QJR-jk-j0O" firstAttribute="top" secondItem="NVE-b0-gf9" secondAttribute="top" constant="35" id="faX-3j-867"/>
+                    <constraint firstItem="7s0-qT-7bB" firstAttribute="top" secondItem="NVE-b0-gf9" secondAttribute="top" constant="6" id="mvw-5Q-uAQ"/>
+                    <constraint firstAttribute="centerX" secondItem="QJR-jk-j0O" secondAttribute="centerX" id="zLC-NH-ODC"/>
+                </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="captionLabel" destination="gne-f7-mKy" id="yGe-FP-NAf"/>
                 <outlet property="imgView" destination="QJR-jk-j0O" id="n7Y-d5-RUx"/>
+                <outlet property="imgViewHeightConstraint" destination="UPU-Qc-pSY" id="T2O-V9-zuo"/>
                 <outlet property="notesCountLabel" destination="fWU-Ry-Bjw" id="lkL-he-Khq"/>
                 <outlet property="tagsLabel" destination="ePu-aY-S14" id="TTX-Tc-930"/>
                 <outlet property="timeAgoLabel" destination="7s0-qT-7bB" id="g1v-0s-AmN"/>
