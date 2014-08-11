@@ -21,13 +21,19 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="459" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7BG-2F-8Pc">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="459" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="7BG-2F-8Pc">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" red="0.99607843159999998" green="0.32549020649999999" blue="0.054901961239999998" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7BG-2F-8Pc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="F1V-KT-oby"/>
+                <constraint firstAttribute="trailing" secondItem="7BG-2F-8Pc" secondAttribute="trailing" id="L53-zk-6cl"/>
+                <constraint firstAttribute="bottom" secondItem="7BG-2F-8Pc" secondAttribute="bottom" id="LHt-oS-RXn"/>
+                <constraint firstItem="7BG-2F-8Pc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zwI-8R-xSo"/>
+            </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>

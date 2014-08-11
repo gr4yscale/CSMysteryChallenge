@@ -32,6 +32,9 @@
                                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
     }
     
+    cell.imgViewHeightConstraint.constant = [self heightForImageViewWithPost:post withCell:cell];
+    [cell setNeedsUpdateConstraints];
+    
     UIFont *font = [UIFont fontWithName:@"EuphemiaUCAS" size:16.0];
     
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
@@ -41,8 +44,7 @@
     cell.captionLabel.attributedText = [NSAttributedString attributedStringFromHTMLData:captionData attributes:attributes];
     cell.captionLabel.alpha = 0.6;
     
-    cell.imgViewHeightConstraint.constant = [self heightForImageViewWithPost:post withCell:cell];
-    [cell setNeedsUpdateConstraints];
+    [cell addShadow];
 }
 
 - (NSString *)tagsStringForTags:(NSArray *)tags {

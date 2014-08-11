@@ -21,4 +21,6 @@ FOUNDATION_EXTERN NSString *const CSPostTableViewCellNibName;;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *imgViewHeightConstraint;
 
+- (void)addShadow;
+
 @end
