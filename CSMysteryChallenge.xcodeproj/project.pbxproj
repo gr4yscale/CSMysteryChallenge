@@ -18,6 +18,7 @@
 		2934154D1997ACBF0043A672 /* TumblrPostsFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = 2934154A1997A1BD0043A672 /* TumblrPostsFixture.json */; };
 		29A5D18A199846AE007B5ED1 /* CSResponseDeserializationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D189199846AE007B5ED1 /* CSResponseDeserializationOperation.m */; };
 		29A5D18D19985BD2007B5ED1 /* CSPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D18C19985BD2007B5ED1 /* CSPathUtilities.m */; };
+		29A5D1931998643F007B5ED1 /* CSDateValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D1921998643F007B5ED1 /* CSDateValueTransformer.m */; };
 		A838F355187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
 		A838F357187F070A002498E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F356187F070A002498E5 /* CoreGraphics.framework */; };
 		A838F359187F070A002498E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F358187F070A002498E5 /* UIKit.framework */; };
@@ -62,6 +63,8 @@
 		29A5D189199846AE007B5ED1 /* CSResponseDeserializationOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSResponseDeserializationOperation.m; sourceTree = "<group>"; };
 		29A5D18B19985BD2007B5ED1 /* CSPathUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPathUtilities.h; sourceTree = "<group>"; };
 		29A5D18C19985BD2007B5ED1 /* CSPathUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPathUtilities.m; sourceTree = "<group>"; };
+		29A5D1911998643F007B5ED1 /* CSDateValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDateValueTransformer.h; sourceTree = "<group>"; };
+		29A5D1921998643F007B5ED1 /* CSDateValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDateValueTransformer.m; sourceTree = "<group>"; };
 		29D6FA5819976DF3004158C5 /* CSPostSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPostSpec.m; sourceTree = "<group>"; };
 		29D6FA5A19976EFF004158C5 /* CSUnitTestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUnitTestHelpers.h; sourceTree = "<group>"; };
 		29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUnitTestHelpers.m; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				2934153619977FB10043A672 /* CSDataAccess.m */,
 				29341538199783210043A672 /* CSPersisting.h */,
 				29D981AE1997B0F700255F84 /* CSResponseSerialization.h */,
+				29A5D1911998643F007B5ED1 /* CSDateValueTransformer.h */,
+				29A5D1921998643F007B5ED1 /* CSDateValueTransformer.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				29A5D18A199846AE007B5ED1 /* CSResponseDeserializationOperation.m in Sources */,
 				A838F365187F070A002498E5 /* CSAppDelegate.m in Sources */,
 				A838F361187F070A002498E5 /* main.m in Sources */,
+				29A5D1931998643F007B5ED1 /* CSDateValueTransformer.m in Sources */,
 				2934153719977FB10043A672 /* CSDataAccess.m in Sources */,
 				A838F36B187F070A002498E5 /* CSViewController.m in Sources */,
 				291A00591997693F005E66A1 /* CSPost.m in Sources */,

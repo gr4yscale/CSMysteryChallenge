@@ -29,7 +29,11 @@
             </userInfo>
         </attribute>
         <attribute name="tags" optional="YES" attributeType="Transformable" syncable="YES"/>
-        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timestamp" optional="YES" attributeType="Date" syncable="YES">
+            <userInfo>
+                <entry key="JSONTransformerName" value="CSDateValueTransformer"/>
+            </userInfo>
+        </attribute>
         <userInfo>
             <entry key="identityAttribute" value="identifier"/>
         </userInfo>

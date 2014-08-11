@@ -66,8 +66,8 @@ describe(@"CSPost", ^{
             [[post.tags should] contain:@"roadtrip"];
             [[post.tags should] contain:@"western united states"];
         });
-        pending(@"maps timestamp", ^{
-            
+        it(@"maps timestamp", ^{
+            [[post.timestamp should] equal:[NSDate dateWithTimeIntervalSince1970:1407444870]];
         });
     });
   
