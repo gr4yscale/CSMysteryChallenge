@@ -16,6 +16,7 @@
 		29341547199792AA0043A672 /* CSDataAccessSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 29341545199791460043A672 /* CSDataAccessSpec.m */; };
 		29341548199792AF0043A672 /* CSPhotoSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6FA5819976DF3004158C5 /* CSPhotoSpec.m */; };
 		29341549199792B80043A672 /* CSUnitTestHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */; };
+		2934154D1997ACBF0043A672 /* TumblrPostsFixture.json in Resources */ = {isa = PBXBuildFile; fileRef = 2934154A1997A1BD0043A672 /* TumblrPostsFixture.json */; };
 		A838F355187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
 		A838F357187F070A002498E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F356187F070A002498E5 /* CoreGraphics.framework */; };
 		A838F359187F070A002498E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F358187F070A002498E5 /* UIKit.framework */; };
@@ -58,6 +59,7 @@
 		2934154319978C330043A672 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		29341545199791460043A672 /* CSDataAccessSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDataAccessSpec.m; sourceTree = "<group>"; };
 		29D6FA5819976DF3004158C5 /* CSPhotoSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPhotoSpec.m; sourceTree = "<group>"; };
+		2934154A1997A1BD0043A672 /* TumblrPostsFixture.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TumblrPostsFixture.json; sourceTree = "<group>"; };
 		29D6FA5A19976EFF004158C5 /* CSUnitTestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUnitTestHelpers.h; sourceTree = "<group>"; };
 		29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUnitTestHelpers.m; sourceTree = "<group>"; };
 		29D981AE1997B0F700255F84 /* CSResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSResponseSerialization.h; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				29D6FA5A19976EFF004158C5 /* CSUnitTestHelpers.h */,
 				29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */,
 				29341545199791460043A672 /* CSDataAccessSpec.m */,
+				2934154A1997A1BD0043A672 /* TumblrPostsFixture.json */,
 			);
 			path = "Unit Tests";
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A838F37E187F070A002498E5 /* InfoPlist.strings in Resources */,
+				2934154D1997ACBF0043A672 /* TumblrPostsFixture.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
