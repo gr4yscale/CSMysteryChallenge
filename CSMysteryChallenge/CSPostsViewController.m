@@ -1,20 +1,20 @@
 //
-//  CSViewController.m
+//  CSPostsViewController.m
 //  CSMysteryChallenge
 //
 //  Created by Gemma Barlow on 1/9/13.
 //  Copyright (c) 2014 Couchsurfing. All rights reserved.
 //
 
-#import "CSViewController.h"
+#import "CSPostsViewController.h"
 #import "CSDataAccess.h"
 
-@interface CSViewController ()
+@interface CSPostsViewController ()
 @property (nonatomic, strong) CSDataAccess *dataAccess;
 
 @end
 
-@implementation CSViewController
+@implementation CSPostsViewController
 
 objection_requires_sel(@selector(dataAccess))
 

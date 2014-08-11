@@ -19,6 +19,8 @@
 		29A5D18A199846AE007B5ED1 /* CSResponseDeserializationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D189199846AE007B5ED1 /* CSResponseDeserializationOperation.m */; };
 		29A5D18D19985BD2007B5ED1 /* CSPathUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D18C19985BD2007B5ED1 /* CSPathUtilities.m */; };
 		29A5D1931998643F007B5ED1 /* CSDateValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A5D1921998643F007B5ED1 /* CSDateValueTransformer.m */; };
+		29F769A8199890C000AE6D36 /* CSPostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F769A7199890C000AE6D36 /* CSPostsViewController.xib */; };
+		29F769AB1998923700AE6D36 /* CSPostsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F769AA1998923700AE6D36 /* CSPostsView.m */; };
 		A838F355187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
 		A838F357187F070A002498E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F356187F070A002498E5 /* CoreGraphics.framework */; };
 		A838F359187F070A002498E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F358187F070A002498E5 /* UIKit.framework */; };
@@ -26,7 +28,7 @@
 		A838F361187F070A002498E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A838F360187F070A002498E5 /* main.m */; };
 		A838F365187F070A002498E5 /* CSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A838F364187F070A002498E5 /* CSAppDelegate.m */; };
 		A838F368187F070A002498E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A838F366187F070A002498E5 /* Main.storyboard */; };
-		A838F36B187F070A002498E5 /* CSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A838F36A187F070A002498E5 /* CSViewController.m */; };
+		A838F36B187F070A002498E5 /* CSPostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A838F36A187F070A002498E5 /* CSPostsViewController.m */; };
 		A838F36D187F070A002498E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A838F36C187F070A002498E5 /* Images.xcassets */; };
 		A838F374187F070A002498E5 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F373187F070A002498E5 /* XCTest.framework */; };
 		A838F375187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
@@ -69,6 +71,9 @@
 		29D6FA5A19976EFF004158C5 /* CSUnitTestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUnitTestHelpers.h; sourceTree = "<group>"; };
 		29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUnitTestHelpers.m; sourceTree = "<group>"; };
 		29D981AE1997B0F700255F84 /* CSResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSResponseSerialization.h; sourceTree = "<group>"; };
+		29F769A7199890C000AE6D36 /* CSPostsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSPostsViewController.xib; sourceTree = "<group>"; };
+		29F769A91998923700AE6D36 /* CSPostsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPostsView.h; sourceTree = "<group>"; };
+		29F769AA1998923700AE6D36 /* CSPostsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPostsView.m; sourceTree = "<group>"; };
 		3F1E55CCDFF04C9B8EED4089 /* Pods-Unit Tests-Kiwi.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests-Kiwi.xcconfig"; path = "Pods/Pods-Unit Tests-Kiwi.xcconfig"; sourceTree = "<group>"; };
 		65A2EBEF67DE4A779F5BC24D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C44B7ACD14D17B171EF43 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -83,8 +88,8 @@
 		A838F363187F070A002498E5 /* CSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSAppDelegate.h; sourceTree = "<group>"; };
 		A838F364187F070A002498E5 /* CSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSAppDelegate.m; sourceTree = "<group>"; };
 		A838F367187F070A002498E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A838F369187F070A002498E5 /* CSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSViewController.h; sourceTree = "<group>"; };
-		A838F36A187F070A002498E5 /* CSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CSViewController.m; sourceTree = "<group>"; };
+		A838F369187F070A002498E5 /* CSPostsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CSPostsViewController.h; path = ../CSPostsViewController.h; sourceTree = "<group>"; };
+		A838F36A187F070A002498E5 /* CSPostsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CSPostsViewController.m; path = ../CSPostsViewController.m; sourceTree = "<group>"; };
 		A838F36C187F070A002498E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A838F372187F070A002498E5 /* Unit Tests-Kiwi.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests-Kiwi.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A838F373187F070A002498E5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -155,6 +160,25 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		29F769A519988FDD00AE6D36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				29F769A7199890C000AE6D36 /* CSPostsViewController.xib */,
+				29F769A91998923700AE6D36 /* CSPostsView.h */,
+				29F769AA1998923700AE6D36 /* CSPostsView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		29F769A619988FE800AE6D36 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A838F369187F070A002498E5 /* CSPostsViewController.h */,
+				A838F36A187F070A002498E5 /* CSPostsViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		A838F348187F070A002498E5 = {
 			isa = PBXGroup;
 			children = (
@@ -193,14 +217,14 @@
 		A838F35A187F070A002498E5 /* CSMysteryChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				29F769A619988FE800AE6D36 /* Controllers */,
+				29F769A519988FDD00AE6D36 /* Views */,
 				2934153F1997877C0043A672 /* Categories */,
 				29470A6C199764DB0059874E /* Library */,
 				29470A6B19975F020059874E /* Models */,
 				A838F363187F070A002498E5 /* CSAppDelegate.h */,
 				A838F364187F070A002498E5 /* CSAppDelegate.m */,
 				A838F366187F070A002498E5 /* Main.storyboard */,
-				A838F369187F070A002498E5 /* CSViewController.h */,
-				A838F36A187F070A002498E5 /* CSViewController.m */,
 				A838F36C187F070A002498E5 /* Images.xcassets */,
 				A838F35B187F070A002498E5 /* Supporting Files */,
 			);
@@ -321,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F769A8199890C000AE6D36 /* CSPostsViewController.xib in Resources */,
 				A838F36D187F070A002498E5 /* Images.xcassets in Resources */,
 				A838F35F187F070A002498E5 /* InfoPlist.strings in Resources */,
 				A838F368187F070A002498E5 /* Main.storyboard in Resources */,
@@ -406,12 +431,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29F769AB1998923700AE6D36 /* CSPostsView.m in Sources */,
 				29A5D18A199846AE007B5ED1 /* CSResponseDeserializationOperation.m in Sources */,
 				A838F365187F070A002498E5 /* CSAppDelegate.m in Sources */,
 				A838F361187F070A002498E5 /* main.m in Sources */,
 				29A5D1931998643F007B5ED1 /* CSDateValueTransformer.m in Sources */,
 				2934153719977FB10043A672 /* CSDataAccess.m in Sources */,
-				A838F36B187F070A002498E5 /* CSViewController.m in Sources */,
+				A838F36B187F070A002498E5 /* CSPostsViewController.m in Sources */,
 				291A00591997693F005E66A1 /* CSPost.m in Sources */,
 				29A5D18D19985BD2007B5ED1 /* CSPathUtilities.m in Sources */,
 				2934153B199785580043A672 /* CSMysteryChallengeObjectionModule.m in Sources */,
