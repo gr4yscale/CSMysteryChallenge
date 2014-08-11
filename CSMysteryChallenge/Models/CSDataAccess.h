@@ -21,5 +21,6 @@ typedef void (^CSFetchCompletionHandler)(id response, NSError *error);
 @property (nonatomic, strong) NSManagedObjectContext *mainQueueMOC;
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
+- (void)fetchPostsAtOffset:(NSUInteger)offset pageSize:(NSUInteger)pageSize completion:(CSFetchCompletionHandler)completion;
 
 @end
