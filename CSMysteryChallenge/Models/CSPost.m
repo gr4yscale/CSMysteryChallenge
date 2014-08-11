@@ -1,15 +1,15 @@
 //
-//  CSPhoto.m
+//  CSPost.m
 //  CSMysteryChallenge
 //
 //  Created by Tyler Powers on 8/10/14.
 //  Copyright (c) 2014 Couchsurfing. All rights reserved.
 //
 
-#import "CSPhoto.h"
+#import "CSPost.h"
 
 
-@implementation CSPhoto
+@implementation CSPost
 
 @dynamic caption;
 @dynamic identifier;
@@ -20,5 +20,9 @@
 @dynamic shortURL;
 @dynamic tags;
 @dynamic timestamp;
+
++ (NSString *)entityName {
+    return @"CSPost";
+}
 
 @end

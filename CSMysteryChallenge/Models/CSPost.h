@@ -1,5 +1,5 @@
 //
-//  CSPhoto.h
+//  CSPost.h
 //  CSMysteryChallenge
 //
 //  Created by Tyler Powers on 8/10/14.
@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface CSPhoto : NSManagedObject
+@interface CSPost : NSManagedObject
 
 @property (nonatomic, retain) NSString * caption;
 @property (nonatomic, retain) NSNumber * identifier;
@@ -21,5 +21,7 @@
 @property (nonatomic, retain) NSString * shortURL;
 @property (nonatomic, retain) id tags;
 @property (nonatomic, retain) NSDate * timestamp;
+
++ (NSString *)entityName;
 
 @end
