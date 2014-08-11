@@ -52,11 +52,13 @@ objection_requires_sel(@selector(deserializer))
                                                        inManagedObjectContext:self.context
                                                                         error:&error];
     }
-    
+    self.error = error;
     if (error) {
         NSLog(@"There was an error deserializing object representation: %@", self.objectRepresentation);
+        [self.delegate operation:self didFailDeserializingObjectRepresentation:self.objectRepresentation];
+    } else {
+        [self.delegate operation:self didFinishDeserializingObject:self.deserializedObject];
     }
-    self.error = error;
 }
 
 @end

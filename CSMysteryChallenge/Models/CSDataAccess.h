@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "CSPersisting.h"
 #import "TMAPIClient.h"
+#import "CSResponseDeserializationOperation.h"
 
-@interface CSDataAccess : NSObject <CSPersisting>
+typedef void (^CSFetchCompletionHandler)(id response, NSError *error);
+
+@interface CSDataAccess : NSObject <CSPersisting, CSResponseDeserializationOperationDelegate>
 
 @property (nonatomic, strong, readonly) TMAPIClient *apiClient;
 
