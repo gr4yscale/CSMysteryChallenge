@@ -52,19 +52,21 @@ objection_requires_sel(@selector(apiClient),
 
 - (void)fetchPostsAtOffset:(NSUInteger)offset pageSize:(NSUInteger)pageSize completion:(CSFetchCompletionHandler)completion {
     NSDictionary *params = @{@"offset" : @(offset), @"limit" : @(pageSize)};
-    [self.apiClient posts:@"couchsurfing" type:nil parameters:params callback: ^(id result, NSError *error) {
-        if (error) {
-            completion(nil, error);
-        } else {
-            completion(result, nil);
-            id posts = result[@"posts"];
-            CSResponseDeserializationOperation *op = [[CSResponseDeserializationOperation alloc] initWithObjectRepresentation:posts
-                                                                                                                   entityName:[CSPost entityName]
-                                                                                                                      context:self.persistentStoreMOC];
-            op.delegate = self;
-            [self.deserializationQueue addOperation:op];
-        }
-	}];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+        [self.apiClient posts:@"couchsurfing" type:nil parameters:params callback: ^(id result, NSError *error) {
+            if (error) {
+                completion(nil, error);
+            } else {
+                completion(result, nil);
+                id posts = result[@"posts"];
+                CSResponseDeserializationOperation *op = [[CSResponseDeserializationOperation alloc] initWithObjectRepresentation:posts
+                                                                                                                       entityName:[CSPost entityName]
+                                                                                                                          context:self.persistentStoreMOC];
+                op.delegate = self;
+                [self.deserializationQueue addOperation:op];
+            }
+        }];
+    });
 }
 
 - (void)buildManagedObjectContexts {
