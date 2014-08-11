@@ -10,17 +10,26 @@
 #import "CSPost.h"
 #import "CSPostTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "NSAttributedString+HTMLStyle.h"
 
 @implementation CSPostsPresenter
 
 - (void)configurePostTableViewCell:(CSPostTableViewCell *)cell withPost:(CSPost *)post {
-    cell.captionLabel.text = post.caption;
     cell.tagsLabel.text = [self tagsStringForTags:post.tags];
     cell.notesCountLabel.text = [NSString stringWithFormat:@"%@ notes", [post.noteCount stringValue]];
     cell.timeAgoLabel.text = @"3 min ago";
     
     [cell.imgView sd_setImageWithURL:[post firstImageURL]
                            completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
+    
+    UIFont *font = [UIFont fontWithName:@"EuphemiaUCAS" size:16.0];
+    
+    NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
+    [attributes addAttributes:@{NSFontAttributeName:font} forHTMLAttribute:QRHTMLAttributeParagraph flatten:YES];
+    
+    NSData *captionData = [post.caption dataUsingEncoding:NSUTF8StringEncoding];
+    cell.captionLabel.attributedText = [NSAttributedString attributedStringFromHTMLData:captionData attributes:attributes];
+    cell.captionLabel.alpha = 0.6;
 }
 
 - (NSString *)tagsStringForTags:(NSArray *)tags {
