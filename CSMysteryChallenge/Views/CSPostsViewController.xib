@@ -6,11 +6,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CSPostsViewController">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="gXJ-sB-yrW"/>
+                <outlet property="postsView" destination="iN0-l3-epB" id="1HL-F9-BQG"/>
+                <outlet property="tableView" destination="7BG-2F-8Pc" id="HNM-Jb-0mZ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="LDy-dj-Cpd"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CSPostsView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="View" customClass="CSPostsView">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -25,7 +27,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.99607843159999998" green="0.32549020649999999" blue="0.054901961239999998" alpha="1" colorSpace="calibratedRGB"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>

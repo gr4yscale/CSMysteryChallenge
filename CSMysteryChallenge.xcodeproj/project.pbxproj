@@ -23,6 +23,7 @@
 		29F769AB1998923700AE6D36 /* CSPostsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F769AA1998923700AE6D36 /* CSPostsView.m */; };
 		29F769AD199893C600AE6D36 /* CSPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29F769AC199893C600AE6D36 /* CSPostTableViewCell.xib */; };
 		29F769B01998942D00AE6D36 /* CSPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F769AF1998942D00AE6D36 /* CSPostTableViewCell.m */; };
+		29F769B4199895E300AE6D36 /* CSPostsDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F769B3199895E300AE6D36 /* CSPostsDatasource.m */; };
 		A838F355187F070A002498E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F354187F070A002498E5 /* Foundation.framework */; };
 		A838F357187F070A002498E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F356187F070A002498E5 /* CoreGraphics.framework */; };
 		A838F359187F070A002498E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A838F358187F070A002498E5 /* UIKit.framework */; };
@@ -79,6 +80,8 @@
 		29F769AC199893C600AE6D36 /* CSPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CSPostTableViewCell.xib; sourceTree = "<group>"; };
 		29F769AE1998942D00AE6D36 /* CSPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPostTableViewCell.h; sourceTree = "<group>"; };
 		29F769AF1998942D00AE6D36 /* CSPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPostTableViewCell.m; sourceTree = "<group>"; };
+		29F769B2199895E300AE6D36 /* CSPostsDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPostsDatasource.h; sourceTree = "<group>"; };
+		29F769B3199895E300AE6D36 /* CSPostsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPostsDatasource.m; sourceTree = "<group>"; };
 		3F1E55CCDFF04C9B8EED4089 /* Pods-Unit Tests-Kiwi.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests-Kiwi.xcconfig"; path = "Pods/Pods-Unit Tests-Kiwi.xcconfig"; sourceTree = "<group>"; };
 		65A2EBEF67DE4A779F5BC24D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C44B7ACD14D17B171EF43 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -187,6 +190,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		29F769B1199895A300AE6D36 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				29F769B2199895E300AE6D36 /* CSPostsDatasource.h */,
+				29F769B3199895E300AE6D36 /* CSPostsDatasource.m */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
 		A838F348187F070A002498E5 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +237,7 @@
 		A838F35A187F070A002498E5 /* CSMysteryChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				29F769B1199895A300AE6D36 /* Datasources */,
 				29F769A619988FE800AE6D36 /* Controllers */,
 				29F769A519988FDD00AE6D36 /* Views */,
 				2934153F1997877C0043A672 /* Categories */,
@@ -450,6 +463,7 @@
 				291A00591997693F005E66A1 /* CSPost.m in Sources */,
 				29A5D18D19985BD2007B5ED1 /* CSPathUtilities.m in Sources */,
 				2934153B199785580043A672 /* CSMysteryChallengeObjectionModule.m in Sources */,
+				29F769B4199895E300AE6D36 /* CSPostsDatasource.m in Sources */,
 				291A0056199767CB005E66A1 /* Model.xcdatamodeld in Sources */,
 				29F769B01998942D00AE6D36 /* CSPostTableViewCell.m in Sources */,
 			);
