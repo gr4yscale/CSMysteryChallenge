@@ -10,6 +10,6 @@
 
 @interface CSPostsDatasource : NSObject <UITableViewDataSource, NSFetchedResultsControllerDelegate>
 
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, weak) UITableView *tableView;
 
 @end

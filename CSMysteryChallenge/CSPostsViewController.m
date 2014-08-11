@@ -16,6 +16,9 @@
 @property (nonatomic, strong) CSDataAccess *dataAccess;
 @property (nonatomic, strong) CSPostsDatasource *postsDatasource;
 
+@property (nonatomic, assign) NSUInteger postsPageOffset;
+@property (nonatomic, assign) BOOL fetchingMorePosts;
+
 @end
 
 @implementation CSPostsViewController
@@ -28,14 +31,9 @@ objection_requires_sel(@selector(dataAccess),
     
     [[JSObjection defaultInjector] injectDependencies:self];
     
-    self.tableView.dataSource = self.postsDatasource;
-    [self.tableView registerNib:[UINib nibWithNibName:CSPostTableViewCellNibName bundle:nil] forCellReuseIdentifier:CSPostTableViewCellReuseIdentifier];
-    [self.tableView reloadData];
+    [self setupTableView];
     
-    [self.dataAccess fetchPostsAtOffset:0 pageSize:20 completion:^(id response, NSError *error) {
-        
-    }];
-    
+    [self fetchMorePosts];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -45,5 +43,30 @@ objection_requires_sel(@selector(dataAccess),
 - (NSString *)nibName {
     return @"CSPostsViewController";
 }
+
+
+#pragma mark - Private
+
+- (void)setupTableView {
+    self.postsDatasource.tableView = self.tableView;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self.postsDatasource;
+    [self.tableView registerNib:[UINib nibWithNibName:CSPostTableViewCellNibName bundle:nil] forCellReuseIdentifier:CSPostTableViewCellReuseIdentifier];
+    [self.tableView reloadData];
+}
+
+
+- (void)fetchMorePosts {
+    if (self.fetchingMorePosts) return;
+    self.fetchingMorePosts = YES;
+    @weakify(self);
+    [self.dataAccess fetchPostsAtOffset:self.postsPageOffset pageSize:20 completion:^(id response, NSError *error) {
+        @strongify(self);
+        NSLog(@"fetched posts at offset: %@", @(self.postsPageOffset));
+        self.fetchingMorePosts = NO;
+        self.postsPageOffset += 1;
+    }];
+}
+
 
 @end

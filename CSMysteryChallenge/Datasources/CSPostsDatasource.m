@@ -12,6 +12,7 @@
 
 @interface CSPostsDatasource ()
 
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
 @end
@@ -28,7 +29,6 @@ objection_requires_sel(@selector(managedObjectContext))
 #pragma mark - Private
 
 - (void)setupFetchedResultsController {
-    
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:[CSPost entityName]];
     fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"timestamp" ascending:NO]];
     
@@ -36,6 +36,8 @@ objection_requires_sel(@selector(managedObjectContext))
                                                                         managedObjectContext:self.managedObjectContext
                                                                           sectionNameKeyPath:nil
                                                                                    cacheName:nil];
+    self.fetchedResultsController.delegate = self;
+    
     NSError *fetchError;
     [self.fetchedResultsController performFetch:&fetchError];
     NSAssert(fetchError == nil, @"Error fetching posts: %@", fetchError);
@@ -55,5 +57,44 @@ objection_requires_sel(@selector(managedObjectContext))
     return cell;
 }
 
+
+#pragma mark - NSFetchedResultsControllerDelegate methods
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView beginUpdates];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller
+   didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath
+     forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath {
+    
+    UITableView *tableView = self.tableView;
+    
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            [tableView insertRowsAtIndexPaths:@[newIndexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeDelete:
+            [tableView deleteRowsAtIndexPaths:@[indexPath]
+                             withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeUpdate:
+            [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            break;
+            
+        case NSFetchedResultsChangeMove:
+            [tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+            break;
+    }
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView endUpdates];
+}
 
 @end
