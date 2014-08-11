@@ -12,10 +12,12 @@
 #import "NSURL+CSAdditions.h"
 #import "CSPersisting.h"
 #import "CSDataAccess.h"
+#import "CSResponseSerialization.h"
 
 @implementation CSMysteryChallengeObjectionModule
 
 - (void)configure {
+    [self bindMetaClass:[GRTJSONSerialization class] toProtocol:@protocol(CSResponseSerialization)];
     
     CSDataAccess *dataAccess = [[CSDataAccess alloc] initWithStore:[self configuredPersistenceStore]];
     [self bind:dataAccess toClass:[CSDataAccess class]];

@@ -60,6 +60,7 @@
 		29D6FA5819976DF3004158C5 /* CSPhotoSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPhotoSpec.m; sourceTree = "<group>"; };
 		29D6FA5A19976EFF004158C5 /* CSUnitTestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUnitTestHelpers.h; sourceTree = "<group>"; };
 		29D6FA5B19976EFF004158C5 /* CSUnitTestHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUnitTestHelpers.m; sourceTree = "<group>"; };
+		29D981AE1997B0F700255F84 /* CSResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSResponseSerialization.h; sourceTree = "<group>"; };
 		3F1E55CCDFF04C9B8EED4089 /* Pods-Unit Tests-Kiwi.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests-Kiwi.xcconfig"; path = "Pods/Pods-Unit Tests-Kiwi.xcconfig"; sourceTree = "<group>"; };
 		65A2EBEF67DE4A779F5BC24D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E8C44B7ACD14D17B171EF43 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 				2934153519977FB10043A672 /* CSDataAccess.h */,
 				2934153619977FB10043A672 /* CSDataAccess.m */,
 				29341538199783210043A672 /* CSPersisting.h */,
+				29D981AE1997B0F700255F84 /* CSResponseSerialization.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
