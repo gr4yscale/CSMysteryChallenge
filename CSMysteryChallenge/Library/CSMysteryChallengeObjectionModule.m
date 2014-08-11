@@ -9,7 +9,7 @@
 #import "CSMysteryChallengeObjectionModule.h"
 #import <Objection.h>
 #import <Groot/Groot.h>
-#import "NSURL+CSAdditions.h"
+#import "CSPathUtilities.h"
 #import "CSPersisting.h"
 #import "CSDataAccess.h"
 #import "CSResponseSerialization.h"
@@ -26,8 +26,8 @@
 - (id<CSPersisting>)configuredPersistenceStore {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:@[bundle]];
-    NSURL *url = [[NSURL documentsDirectory] URLByAppendingPathComponent:@"MysteryChallenge.sqlite"];
-    return (id<CSPersisting>)[[GRTManagedStore alloc] initWithPath:[url absoluteString] managedObjectModel:model];
+    NSString *path = [[CSPathUtilities documentsDirectory] stringByAppendingPathComponent:@"MysteryChallenge.sqlite"];
+    return (id<CSPersisting>)[[GRTManagedStore alloc] initWithPath:path managedObjectModel:model];
 }
 
 @end

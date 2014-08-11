@@ -1,5 +1,5 @@
 //
-//  NSURL+CSAdditions.h
+//  CSPathUtilities.h
 //  CSMysteryChallenge
 //
 //  Created by Tyler Powers on 8/10/14.
@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSURL (CSAdditions)
+@interface CSPathUtilities : NSObject
 
-+ (NSURL *)documentsDirectory;
++ (NSString *)documentsDirectory;
 
 @end
