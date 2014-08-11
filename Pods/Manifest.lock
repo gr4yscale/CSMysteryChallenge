@@ -10,6 +10,7 @@ PODS:
   - SDWebImage (3.7.1):
     - SDWebImage/Core
   - SDWebImage/Core (3.7.1)
+  - SVPullToRefresh (0.4.1)
   - TMTumblrSDK (1.0.8):
     - TMTumblrSDK/Activity
     - TMTumblrSDK/APIClient
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - NSAttributedString-HTMLStyle (~> 0.0.1)
   - Objection (~> 1.4)
   - SDWebImage (~> 3.7.1)
+  - SVPullToRefresh (~> 0.4.1)
   - TMTumblrSDK
 
 SPEC CHECKSUMS:
@@ -43,6 +45,7 @@ SPEC CHECKSUMS:
   NSAttributedString-HTMLStyle: a32cb22b4e925e62f8e0d1de900a6049d2777c03
   Objection: 8176a996209cdcd23490c57d6e807a25faa8d54d
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
+  SVPullToRefresh: d5161ebc833a38b465364412e5e307ca80bbb190
   TMTumblrSDK: b9fada23e88b42ade2b492a6db95bfb1dff6304b
 
 COCOAPODS: 0.33.1
