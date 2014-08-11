@@ -23,5 +23,6 @@
 @property (nonatomic, retain) NSDate * timestamp;
 
 + (NSString *)entityName;
+- (NSURL *)firstImageURL;
 
 @end

@@ -25,4 +25,9 @@
     return @"CSPost";
 }
 
+- (NSURL *)firstImageURL {
+    NSString *urlString = [self.photos firstObject][@"original_size"][@"url"];
+    return [NSURL URLWithString:urlString];
+}
+
 @end

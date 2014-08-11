@@ -9,6 +9,7 @@
 #import "CSPostsPresenter.h"
 #import "CSPost.h"
 #import "CSPostTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @implementation CSPostsPresenter
 
@@ -17,14 +18,19 @@
     cell.tagsLabel.text = [self tagsStringForTags:post.tags];
     cell.notesCountLabel.text = [NSString stringWithFormat:@"%@ notes", [post.noteCount stringValue]];
     cell.timeAgoLabel.text = @"3 min ago";
+    
+    [cell.imgView sd_setImageWithURL:[post firstImageURL]
+                           completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
 }
 
 - (NSString *)tagsStringForTags:(NSArray *)tags {
     NSString *string = @"";
     for (NSString *tag in tags) {
-        string = [string stringByAppendingFormat:@"#%@, ", tag];
+        string = [string stringByAppendingFormat:@"#%@", tag];
+        if (tag != [tags lastObject]) {
+            string = [string stringByAppendingString:@", "];
+        }
     }
-    string = [string substringToIndex:string.length-2];
     return string;
 }
 
