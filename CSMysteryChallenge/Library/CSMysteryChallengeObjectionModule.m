@@ -22,11 +22,14 @@
     
     [self bindMetaClass:[GRTJSONSerialization class] toProtocol:@protocol(CSResponseSerialization)];
     
-    [self bindBlock:^id(JSObjectionInjector *context) {
-        return [self configuredStore];
-    } toProtocol:@protocol(CSPersisting)];
+    id store = [self configuredStore];
     
-    [self bind:[[CSDataAccess alloc] init] toClass:[CSDataAccess class]];
+    CSDataAccess *dataAccess = [[CSDataAccess alloc] initWithStore:store];
+    [dataAccess buildManagedObjectContexts];
+    
+    [self bind:dataAccess toClass:[CSDataAccess class]];
+    
+    [self bind:dataAccess.mainQueueMOC toClass:[NSManagedObjectContext class]];
 }
 
 - (GRTManagedStore *)configuredStore {

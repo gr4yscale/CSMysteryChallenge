@@ -17,10 +17,14 @@ typedef void (^CSFetchCompletionHandler)(id response, NSError *error);
 
 @property (nonatomic, strong, readonly) TMAPIClient *apiClient;
 
-@property (nonatomic, strong) NSManagedObjectContext *persistentStoreMOC;
-@property (nonatomic, strong) NSManagedObjectContext *mainQueueMOC;
+@property (nonatomic, strong, readonly) NSManagedObjectContext *mainQueueMOC;
+@property (nonatomic, strong, readonly) NSManagedObjectContext *persistentStoreMOC;
+
+- (instancetype)initWithStore:(id<CSPersisting>)store;
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator;
+- (void)buildManagedObjectContexts;
+
 - (void)fetchPostsAtOffset:(NSUInteger)offset pageSize:(NSUInteger)pageSize completion:(CSFetchCompletionHandler)completion;
 
 @end

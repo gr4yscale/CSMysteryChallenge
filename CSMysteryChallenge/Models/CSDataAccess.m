@@ -12,6 +12,10 @@
 @interface CSDataAccess ()
 
 @property (nonatomic, strong) id<CSPersisting>store;
+
+@property (nonatomic, strong) NSManagedObjectContext *mainQueueMOC;
+@property (nonatomic, strong) NSManagedObjectContext *persistentStoreMOC;
+
 @property (nonatomic, strong) TMAPIClient *apiClient;
 @property (nonatomic, strong) NSOperationQueue *deserializationQueue;
 
@@ -20,13 +24,18 @@
 @implementation CSDataAccess
 
 objection_register_singleton(CSDataAccess)
-objection_requires_sel(@selector(store),
-                       @selector(apiClient),
+objection_requires_sel(@selector(apiClient),
                        @selector(deserializationQueue))
 
+- (instancetype)initWithStore:(id<CSPersisting>)store {
+    self = [super init];
+    if (self) {
+        self.store = store;
+    }
+    return self;
+}
+
 - (void)awakeFromObjection {
-    [self buildManagedObjectContexts];
-    [self addObserverForContextDidSaveNotification];
     [self setupAPIClient];
     
     self.deserializationQueue.name = @"Response Deserialization Queue";
@@ -58,8 +67,6 @@ objection_requires_sel(@selector(store),
 	}];
 }
 
-#pragma mark - Private
-
 - (void)buildManagedObjectContexts {
     self.persistentStoreMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
     self.persistentStoreMOC.persistentStoreCoordinator = [self persistentStoreCoordinator];
@@ -69,7 +76,11 @@ objection_requires_sel(@selector(store),
     self.mainQueueMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     self.mainQueueMOC.parentContext = self.persistentStoreMOC;
     self.mainQueueMOC.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy;
+    
+    [self addObserverForContextDidSaveNotification];
 }
+
+#pragma mark - Private
 
 - (void)addObserverForContextDidSaveNotification {
     @weakify(self);

@@ -23,7 +23,7 @@ describe(@"CSPost", ^{
     
     beforeEach(^{
         dataAccess = [[JSObjection defaultInjector] getObject:[CSDataAccess class]];
-        moc = dataAccess.persistentStoreMOC;
+        moc = [[JSObjection defaultInjector] getObject:[NSManagedObjectContext class]];
         
         NSDictionary *fixtureDict = [CSUnitTestHelpers objectFromFixtureFile:@"TumblrPostsFixture.json"];
         postsFromFixture = fixtureDict[@"response"][@"posts"];
