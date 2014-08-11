@@ -32,7 +32,12 @@
                                completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {}];
     }
     
-    cell.imgViewHeightConstraint.constant = [self heightForImageViewWithPost:post withCell:cell];
+    CGFloat value = [self heightForImageViewWithPost:post withCell:cell];
+    if (isnan(value)) {
+        cell.imgViewHeightConstraint.constant = 320;
+    } else {
+        cell.imgViewHeightConstraint.constant = value;
+    }
     [cell setNeedsUpdateConstraints];
     
     UIFont *font = [UIFont fontWithName:@"EuphemiaUCAS" size:16.0];
@@ -60,9 +65,9 @@
 
 - (CGFloat)heightForImageViewWithPost:(CSPost *)post withCell:(CSPostTableViewCell *)cell {
     CGSize originalSize = [post sizeForFirstImage];
-    CGFloat ratio = originalSize.width / originalSize.height;
-    CGFloat newHeight = cell.imgView.frame.size.width / ratio;
-    return newHeight;
+    CGSize newSize = cell.imgView.frame.size;
+    CGFloat scaleFactor = (originalSize.width > originalSize.height) ? newSize.width / originalSize.width : newSize.height / originalSize.height;
+    return originalSize.height * scaleFactor;
 }
 
 @end
