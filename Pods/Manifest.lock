@@ -5,6 +5,7 @@ PODS:
   - libextobjc/EXTScope (0.4):
     - libextobjc/RuntimeExtensions
   - libextobjc/RuntimeExtensions (0.4)
+  - NSAttributedString-HTMLStyle (0.0.1)
   - Objection (1.4)
   - SDWebImage (3.7.1):
     - SDWebImage/Core
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Groot (~> 0.1)
   - Kiwi (~> 2.3.0)
   - libextobjc/EXTScope (~> 0.4)
+  - NSAttributedString-HTMLStyle (~> 0.0.1)
   - Objection (~> 1.4)
   - SDWebImage (~> 3.7.1)
   - TMTumblrSDK
@@ -38,6 +40,7 @@ SPEC CHECKSUMS:
   JXHTTP: dd1fe9c6fa21e7b2be9724ef2be16c66aafc44b4
   Kiwi: 54bece5b35564d9b8e03c608d926f1a22fcfc589
   libextobjc: ba42e4111f433273a886cd54f0ddaddb7f62f82f
+  NSAttributedString-HTMLStyle: a32cb22b4e925e62f8e0d1de900a6049d2777c03
   Objection: 8176a996209cdcd23490c57d6e807a25faa8d54d
   SDWebImage: 116e88633b5b416ea0ca4b334a4ac59cf72dd38d
   TMTumblrSDK: b9fada23e88b42ade2b492a6db95bfb1dff6304b

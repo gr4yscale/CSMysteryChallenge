@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_JXHTTP 0
 #define COCOAPODS_VERSION_PATCH_JXHTTP 0
 
+// NSAttributedString-HTMLStyle
+#define COCOAPODS_POD_AVAILABLE_NSAttributedString_HTMLStyle
+#define COCOAPODS_VERSION_MAJOR_NSAttributedString_HTMLStyle 0
+#define COCOAPODS_VERSION_MINOR_NSAttributedString_HTMLStyle 0
+#define COCOAPODS_VERSION_PATCH_NSAttributedString_HTMLStyle 1
+
 // Objection
 #define COCOAPODS_POD_AVAILABLE_Objection
 #define COCOAPODS_VERSION_MAJOR_Objection 1
