@@ -34,7 +34,7 @@
     
     CGFloat value = [self heightForImageViewWithPost:post withCell:cell];
     if (isnan(value)) {
-        cell.imgViewHeightConstraint.constant = 320;
+        cell.imgViewHeightConstraint.constant = 0;
     } else {
         cell.imgViewHeightConstraint.constant = value;
     }
@@ -65,9 +65,21 @@
 
 - (CGFloat)heightForImageViewWithPost:(CSPost *)post withCell:(CSPostTableViewCell *)cell {
     CGSize originalSize = [post sizeForFirstImage];
+    
+    if (originalSize.height == 0) {
+        return 0.0;
+    }
+    
+    CGFloat height = 0;
     CGSize newSize = cell.imgView.frame.size;
-    CGFloat scaleFactor = (originalSize.width > originalSize.height) ? newSize.width / originalSize.width : newSize.height / originalSize.height;
-    return originalSize.height * scaleFactor;
+    CGFloat scaleFactor = newSize.width / originalSize.width;
+    
+    if (originalSize.width > newSize.width) {
+        height = originalSize.height * scaleFactor;
+    } else {
+        height = originalSize.height / scaleFactor;
+    }
+    return height;
 }
 
 @end

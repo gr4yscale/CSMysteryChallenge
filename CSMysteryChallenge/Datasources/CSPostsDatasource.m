@@ -69,10 +69,7 @@ objection_requires_sel(@selector(managedObjectContext),
     CSPostTableViewCell *templateCell = self.postsPresenter.templateCell;
     [self.postsPresenter configurePostTableViewCell:templateCell withPost:post fetchImages:NO];
     
-    CGFloat val = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    return val;
-    
-    
+    return [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
 }
 
 
