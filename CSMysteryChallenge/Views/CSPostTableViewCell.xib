@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="35" width="320" height="192"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="192" id="UPU-Qc-pSY"/>
                             <constraint firstAttribute="width" constant="320" id="dqs-cE-YgN"/>
+                            <constraint firstAttribute="height" constant="192" id="j4K-CS-b77"/>
                         </constraints>
                     </imageView>
                     <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="gne-f7-mKy" userLabel="captionLabel">
@@ -69,12 +69,14 @@
                     <constraint firstAttribute="bottom" secondItem="fWU-Ry-Bjw" secondAttribute="bottom" constant="13" id="2oj-p6-KVv"/>
                     <constraint firstAttribute="centerX" secondItem="ePu-aY-S14" secondAttribute="centerX" id="7DN-12-laH"/>
                     <constraint firstAttribute="centerX" secondItem="gne-f7-mKy" secondAttribute="centerX" id="G2j-zX-rUG"/>
+                    <constraint firstItem="fWU-Ry-Bjw" firstAttribute="top" secondItem="ePu-aY-S14" secondAttribute="bottom" constant="13" id="I0g-Dt-Pxh"/>
                     <constraint firstAttribute="bottom" secondItem="ePu-aY-S14" secondAttribute="bottom" constant="56" id="Tha-jh-VGP"/>
                     <constraint firstItem="ePu-aY-S14" firstAttribute="top" secondItem="gne-f7-mKy" secondAttribute="bottom" constant="3" id="Vn3-4D-9Im"/>
                     <constraint firstAttribute="trailing" secondItem="7s0-qT-7bB" secondAttribute="trailing" constant="9" id="Xlq-bw-Cq2"/>
                     <constraint firstItem="fWU-Ry-Bjw" firstAttribute="leading" secondItem="NVE-b0-gf9" secondAttribute="leading" constant="20" id="d3V-VJ-72l"/>
                     <constraint firstItem="QJR-jk-j0O" firstAttribute="top" secondItem="NVE-b0-gf9" secondAttribute="top" constant="35" id="faX-3j-867"/>
                     <constraint firstItem="7s0-qT-7bB" firstAttribute="top" secondItem="NVE-b0-gf9" secondAttribute="top" constant="6" id="mvw-5Q-uAQ"/>
+                    <constraint firstItem="gne-f7-mKy" firstAttribute="top" secondItem="QJR-jk-j0O" secondAttribute="bottom" constant="8" id="yMG-Yp-qYW"/>
                     <constraint firstAttribute="centerX" secondItem="QJR-jk-j0O" secondAttribute="centerX" id="zLC-NH-ODC"/>
                 </constraints>
             </tableViewCellContentView>
@@ -82,7 +84,7 @@
             <connections>
                 <outlet property="captionLabel" destination="gne-f7-mKy" id="yGe-FP-NAf"/>
                 <outlet property="imgView" destination="QJR-jk-j0O" id="n7Y-d5-RUx"/>
-                <outlet property="imgViewHeightConstraint" destination="UPU-Qc-pSY" id="T2O-V9-zuo"/>
+                <outlet property="imgViewHeightConstraint" destination="j4K-CS-b77" id="426-Yf-p6F"/>
                 <outlet property="notesCountLabel" destination="fWU-Ry-Bjw" id="lkL-he-Khq"/>
                 <outlet property="tagsLabel" destination="ePu-aY-S14" id="TTX-Tc-930"/>
                 <outlet property="timeAgoLabel" destination="7s0-qT-7bB" id="g1v-0s-AmN"/>

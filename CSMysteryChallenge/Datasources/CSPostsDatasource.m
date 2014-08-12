@@ -69,14 +69,10 @@ objection_requires_sel(@selector(managedObjectContext),
     CSPostTableViewCell *templateCell = self.postsPresenter.templateCell;
     [self.postsPresenter configurePostTableViewCell:templateCell withPost:post fetchImages:NO];
     
-    // unable to get a non-zero value out of [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    // so...resorting to hacks :(
+    CGFloat val = [templateCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    return val;
     
-    CGSize captionLabelSize = [templateCell.captionLabel systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    CGSize tagLabelSize = [templateCell.tagsLabel systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
     
-    CGFloat dynamicHeights = captionLabelSize.height + tagLabelSize.height + templateCell.imgViewHeightConstraint.constant;
-    return dynamicHeights + 97;
 }
 
 
