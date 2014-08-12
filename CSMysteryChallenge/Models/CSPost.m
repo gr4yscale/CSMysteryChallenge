@@ -12,6 +12,7 @@
 @implementation CSPost
 
 @dynamic caption;
+@dynamic body;
 @dynamic identifier;
 @dynamic imagePermalink;
 @dynamic noteCount;

@@ -45,11 +45,16 @@
     NSMutableDictionary *attributes = [NSMutableDictionary dictionary];
     [attributes addAttributes:@{NSFontAttributeName:font} forHTMLAttribute:QRHTMLAttributeParagraph flatten:YES];
     
-    NSData *captionData = [post.caption dataUsingEncoding:NSUTF8StringEncoding];
-    cell.captionLabel.attributedText = [NSAttributedString attributedStringFromHTMLData:captionData attributes:attributes];
+    NSData *htmlData;
+    if ([post.body length] > 0) {
+        htmlData = [post.body dataUsingEncoding:NSUTF8StringEncoding];
+    } else {
+        htmlData = [post.caption dataUsingEncoding:NSUTF8StringEncoding];
+    }
+    cell.captionLabel.attributedText = [NSAttributedString attributedStringFromHTMLData:htmlData attributes:attributes];
     cell.captionLabel.alpha = 0.6;
     
-    [cell addShadow];
+//    [cell addShadow];
 }
 
 - (NSString *)tagsStringForTags:(NSArray *)tags {

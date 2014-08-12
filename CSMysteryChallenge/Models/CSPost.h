@@ -13,6 +13,7 @@
 @interface CSPost : NSManagedObject
 
 @property (nonatomic, retain) NSString * caption;
+@property (nonatomic, retain) NSString * body;
 @property (nonatomic, retain) NSNumber * identifier;
 @property (nonatomic, retain) NSString * imagePermalink;
 @property (nonatomic, retain) NSNumber * noteCount;
