@@ -9,6 +9,10 @@ RestKit solves a lot of difficult problems, but it is so very opininated in how 
 
 So, I'm using Groot to deserialize JSON and give back NSManagedObjects, and call into the TMAPIClient for network requests. I tried to genericize as much as possible the components that make up CSDataAccess. The idea for that class was that the consumer (usually view controllers) should have to do nothing more than to just say "fetch these resources" and not have to worry about anything else. It should also provide a managedObjectContext for specific for UI updates.
 
+Additional thoughts on the data/networking side: 
+
+Many people are familiar with Mantle for mapping JSON to objects. I was going to try that route, inspired by this slide deck: http://www.slideshare.net/GuillermoGonzalez51/better-web-clients-with-mantle-and-afnetworking but I discovered Mantle doesn't handle Core Data well. In particular, if you fetch down partial JSON for an object that's already been deserialized previously, all of the attributes where there were nil JSON keys get nil'd. This is because the MTLManagedObjectAdapter makes a copy of Mantle objects and applies the values of each property onto a new NSManagedObject everytime. I then discovered they removed Core Data support entirely as of very recent: https://github.com/Mantle/Mantle/pull/374 So, I ended up with Groot. The author of Overcoat who was advocating use of Mantle + Overcoat wrote it, and I'm liking it quite well.
+
 Objection is used to inject dependencies. I think that using dependency injection makes a) you think about the interfaces between your objects more closely and b) makes it easy to swap out dependencies for stubs or specially-instantiated objects for testing purposes.
 
 There are a couple of places where I have properties or methods exposed publicly that I would like to make private. This is a drawback of me not having an adequate testing environment setup still. Sometimes if it's very important to test it, we get around it by using a pragma to suppress warnings about unrecognized selectors and call the implementations private selectors anyways. More likely than not you shouldn't be testing a private method, but looking at private properties is sometimes helpful. Anyway, I end up making the public declaration of these properties that I'd rather have hidden a readonly property but then redeclare it read-write in the private declaration.
@@ -29,15 +33,13 @@ I tried to let Auto Layout compute the size of the entire CSPostTableViewCell bu
 
 Things I didn't get time to build but would have liked to:
 
--A state machine-backed container view showing different subviews depending on the state:
-	-no internet
-	-empty data
-	-loading data for the first time
-	-showing data
+-A state machine-backed container view showing different subviews depending on the state: (no internet, empty data, loading data for the first time, data available)
 
--Better paginated API handling
+-Better paginated API handling: Determine the correct offset to accurately fetch new posts. Look at the original post_count and adjust the offset accordingly if the response has a higher post_count
 
--Loading placeholder for images
+-Loading placeholder for images; more robust image fetching
+
+-Nice interactive animations and transitions, inspired by Facebook's "Paper". I didn't have any other controllers or many views to work with. I might have used the "Pop" framework.
 
 -Photo detail view (I was going to just hook it up to URBMediaViewController)
 
